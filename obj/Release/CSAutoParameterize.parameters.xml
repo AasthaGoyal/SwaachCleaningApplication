@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="dbcleaningConnectionString-Web.config Connection String" description="dbcleaningConnectionString Connection String used in web.config by the application to access the database." defaultValue="Data Source=aago001;Initial Catalog=dbcleaning;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\CleaningApplication\\CleaningApplication\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='dbcleaningConnectionString']/@connectionString" />
+  </parameter>
+</parameters>
