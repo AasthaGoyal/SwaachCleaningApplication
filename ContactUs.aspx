@@ -1,24 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="ContactUs.aspx.cs" Inherits="CleaningApplication.WebForm4" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-	 <link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/responsive.css" rel="stylesheet">
-<!--<link href="css/color.css" rel="stylesheet">-->
+	<form runat="server">
 
-<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-<link rel="icon" href="images/favicon.png" type="image/x-icon">
-
-<!-- Responsive -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
    
-
-	<style>
-		#map {
-		height: 400px;  /* The height is 400 pixels */
-		width: 100%;  /* The width is the width of the web page */
-	   }
-	</style>
 	 
 
 	<section class="in-touch-section" style="background-image:url(images/background/5.jpg)">
@@ -76,20 +60,21 @@
 							
 	<!--Contact Page Section-->
 	<section class="contact-page-section">
-		
 		<div class="auto-container">
 			<div class="row clearfix">
 				
 				<!--Form Column-->
-				<div class="form-column col-lg-6 col-md-12 col-sm-12">
+					<div class="form-column col-lg-6 col-md-12 col-sm-12">
 					<div class="inner-column">
 						<!--Contact Form-->
 						<div class="contact-form">
-							
+							<form method="post" action="sendemail.php" id="contact-form">
 								<div class="row clearfix">
 									<div class="form-group col-lg-12 col-md-12 col-sm-12">
+
 										<label>Name</label>
-										<asp:TextBox runat="server" type="text"  Id="txtName" placeholder="Enter Your Name" />
+									  
+										<asp:textbox runat="server" type="text" id="txtName" placeholder="Enter Your Name" />
 									</div>
 									
 									<div class="form-group col-md-6 col-sm-6">
@@ -103,28 +88,28 @@
 									</div>
 									
 									<div class="form-group col-md-12 col-sm-12">
-										<label>Youe Message</label>
+										<label>Your Message</label>
 									   
-										<asp:TextBox runat="server" ID="txtMessage" placeholder="Your words goes here..." Height="112px"/>
+										<asp:TextBox runat="server" ID="txtMessage" placeholder="Your message.." Height="112px"/>
 									</div>
 									
 								<div class="form-group col-md-12 col-sm-12">
-									<asp:Button ID="btnSubmit" class="btn-primary" runat="server" Text="Submit" Causes validation = "false" OnClick="btnSubmit_Click" />
+									<asp:Button ID="btnSubmit" type="submit" class="theme-btn message-btn" runat="server" Text="Submit"  OnClick="btnSubmit_Click"  />
 								
 									   
 									<asp:Label ID="lblMessage" runat="server" ForeColor="#CC0000" Font-Bold="True" ></asp:Label>
 										</div>  
 								</div>
-									
-							
+							</form>
 						</div>
-							
 						<!--End Contact Form-->
 					</div>
 				</div>
-						
+				
 				<!--Content Column-->
 				<div class="content-column col-lg-6 col-md-12 col-sm-12">
+					
+				  
 					<div class="inner-column">
 						<!--Sec Title-->
 						<div class="sec-title">
@@ -134,7 +119,7 @@
 							<h2>Contact Persons</h2>
 							<div class="separator"></div>
 						</div>
-						<div class="text">You can talk directly with any department you want to talk to, Feel free to contact us, dont be shy.</div>
+						<div class="text">You can talk directly with any department you want to talk to, Feel free to contact us.</div>
 						<div class="row clearfix">
 						
 							<asp:Repeater ID="RepStaff" runat="server">
@@ -168,36 +153,18 @@
 							
 							
 							
-							
+						
 						</div>
 					</div>
 				</div>
-				
-			</div>
-		</div>
-	</section>
+				<%--<img src="images/main-slider/contact.png" />--%>
 	<!--End Contact Page Section-->
-	
-	<section class="map-section">
-		<!--Map Outer-->
-		<div class="map-outer">
-			<div class="google-map"
-				id="contact-google-map" 
-				data-map-lat="44.231172" 
-				data-map-lng="-76.485954" 
-				data-icon-path="images/icons/map-marker.png" 
-				data-map-title="Alabama, USA" 
-				data-map-zoom="12" 
-				data-markers='{
-					"marker-1": [42.231172, -84.485954, "<h4>Branch Office</h4><p>4/99 Alabama, USA</p>"]
-						}'>
-
+				</div>
 			</div>
-		</div>
-	</section>
-	<!--End Map Section-->
+	 </section>
 	
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHzPSV2jshbjI8fqnC_C4L08ffnj5EN3A"></script>
-<script src="js/gmaps.js"></script>
-<script src="js/map-script.js"></script>
+	 </form>
+	
+   
+	
 </asp:Content>

@@ -47,6 +47,7 @@ E:\CleaningApplication\CleaningApplication\bin\roslyn\vbc.exe.config
 E:\CleaningApplication\CleaningApplication\bin\roslyn\vbc.rsp
 E:\CleaningApplication\CleaningApplication\bin\roslyn\VBCSCompiler.exe
 E:\CleaningApplication\CleaningApplication\bin\roslyn\VBCSCompiler.exe.config
+E:\CleaningApplication\CleaningApplication\bin\AjaxControlToolkit.dll
 E:\CleaningApplication\CleaningApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 E:\CleaningApplication\CleaningApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 E:\CleaningApplication\CleaningApplication\obj\Debug\CleaningApplication.csproj.CoreCompileInputs.cache

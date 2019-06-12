@@ -36,8 +36,8 @@ namespace CleaningApplication
             {
                 while (reader.Read())
                 {
-                    logoImage.ImageUrl = reader.GetString(0);
-                    lblname.Text = reader.GetString(1);
+                    //logoImage.ImageUrl = reader.GetString(0);
+                    //lblname.Text = reader.GetString(1);
                     lblphone.Text = reader.GetString(2);
                     lbladdress.Text = reader.GetString(3);
                     lbltime.Text = reader.GetString(4);

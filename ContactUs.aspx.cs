@@ -19,17 +19,15 @@ namespace CleaningApplication
 
         protected void Page_Load(object sender, EventArgs e)
         {
-           
-
-          //  FillContactData();
-            //if (!IsPostBack)
-            //{
-
-            //    FillStaffData();
 
 
+            FillContactData();
+            if (!IsPostBack)
+            {
 
-            //}
+                FillStaffData();
+            }
+
 
         }
 
@@ -58,6 +56,7 @@ namespace CleaningApplication
 
         public void FillStaffData()
         {
+            conn = new SqlConnection(connectionString);
 
             conn.Open();
             SqlDataAdapter da;
@@ -72,9 +71,7 @@ namespace CleaningApplication
         }
 
 
-        
 
-        
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
@@ -86,14 +83,14 @@ namespace CleaningApplication
             body += "<br/> Message: " + txtMessage.Text + ".";
 
 
-            lblMessage.Text = "Code reaching";
+           
 
             try
             {
                 MailMessage message = new MailMessage();
-                message.To.Add("aastha2150@gmail.com");
+                message.To.Add("swaachclean@gmail.com");
                 message.From = new MailAddress("aastha2150@gmail.com");
-                message.Subject = "A new message received!";
+                message.Subject = "A new 'Request for quote' received!";
                 message.Body = body;
                 message.IsBodyHtml = true;
                 SmtpClient smtp = new SmtpClient();

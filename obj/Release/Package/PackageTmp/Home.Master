@@ -8,23 +8,26 @@
 	<meta charset="utf-8">
 <title>Swaach Cleaning Services</title>
 <!-- Stylesheets -->
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/responsive.css" rel="stylesheet">
+<link href="css/bootstrap.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet"/>
+<link href="css/responsive.css" rel="stylesheet"/>
 <!--<link href="css/color.css" rel="stylesheet">-->
 
-<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-<link rel="icon" href="images/favicon.png" type="image/x-icon">
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon"/>
+<link rel="icon" href="images/favicon.png" type="image/x-icon"/>
 
 <!-- Responsive -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 	<style type="text/css">
 		.auto-style1 {
 			width: 132px;
 			height: 123px;
 		}
 	</style>
+	<asp:ContentPlaceHolder runat="server" ID="head">
+
+	</asp:ContentPlaceHolder>
 </head>
 <body>
 	<div class="page-wrapper">
@@ -34,7 +37,7 @@
 	
 	<!-- Main Header-->
 
-	<form id="form1" runat="server">
+	
 	<header class="main-header">
 	
 		<!--Header Top-->
@@ -45,10 +48,10 @@
 					<div class="top-left pull-left">
 						
 						<ul class="social-nav">
-							<li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
-							<li><a href="#"><span class="fa fa-twitter"></span></a></li>
-							<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
-							<li><a href="#"><span class="fa fa-youtube"></span></a></li>
+							<li><a href="https://www.facebook.com/swaach.shah.5"><span class="fa fa-facebook-f"></span></a></li>
+							<li><a href="https://instagram.com/swaachclean9?igshid=1axkv4h53820d"><span class="fa fa-instagram"></span></a></li>
+							<li><a href="#"><span class="fa fa-wechat"></span></a></li>
+							<%--<li><a href="#"><span class="fa fa-youtube"></span></a></li>--%>
 						</ul>
 					</div>
 					<!--Top Right-->
@@ -73,19 +76,15 @@
 				</div>
 			</div>
 		</div>
-	<table class="form-control">
-		<tr>
-			<td rowspan="2">
-				<a href="Default.aspx"><asp:image runat="server" id="logoImage" src="images/main-slider/logoo.png"  title="" CssClass="auto-style1" /></a>
-			</td>
-			<td>
+	
 				<!--Header-Upper-->
 		<div class="header-upper">
 			<div class="auto-container">
 				<div class="clearfix">
 					
 					<div class="pull-left logo-box">
-						<div class="logo"><a href="Default.aspx"><asp:label runat="server" id="lblname" style="font-family:'Eras ITC'" Font-Bold="True" Font-Size="X-Large" ForeColor="#000066"></asp:label></a></div>
+						<div class="logo"><a href="Default.aspx">
+							<img src="images/icons/nnlogo.jpg" style="width:280px; height:70px"/></a></div>
 					</div>
 					
 					<div class="pull-right upper-right clearfix">
@@ -131,10 +130,7 @@
 				</div>
 			</div>
 		</div>
-			</td>
-		</tr>
-		<tr>
-			<td>
+			
 				<!--Header Lower-->
 		<div class="header-lower">
 			
@@ -152,14 +148,14 @@
 						
 						<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
 							<ul class="navigation clearfix">
-								<li class="current dropdown"><a href="Default.aspx">Home</a>
+								<li class="current "><a href="Default.aspx">Home</a>
 									
 								</li>
-								<li class="dropdown"><a href="Services.aspx">Services</a>
-									  <ul>
+								<li><a href="Services.aspx">Services</a>
+									  <%--<ul>
 										<%--<li><a href="ServiceDetails?categoryid=1"> End of tenancy cleaning</a></li>
 									   <li><a href="ServiceDetails?categoryid=1"> End of tenancy cleaning</a></li>
-										--%>	<asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1">
+											<asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1">
 												
 											<ItemTemplate>
 											  
@@ -174,7 +170,7 @@
 											
 											</asp:DataList>
 											
-									  </ul>
+									  </ul>--%>
 									
 								</li>
 								<li ><a href="Process.aspx">How does it work?</a>
@@ -185,8 +181,8 @@
 								</li>
 								<li class="dropdown"><a href="Reviews.aspx">Reviews</a>
 									<ul>
-										<li><a href="blog.html">Add a review</a></li>
-										<li><a href="blog-large.html">See all reviews</a></li>
+										<li><a href="AddReview.aspx">Add a review</a></li>
+										<li><a href="Reviews.aspx">See all reviews</a></li>
 									  
 									</ul>
 								</li>
@@ -204,8 +200,8 @@
 							</div>
 						<a href="tel: 02040050006"><span class="theme_color">Phone:</span> <asp:Label ID="lblphone" runat="server" ></asp:Label></a>	
 						</div>
-						<div class="appointment-box">
-                           <Button  class="theme-btn appointment-btn" ID="btnquote" data-target="#quotemodal" data-toggle="modal"> <span class="icon flaticon-calendar-1"></span>Request Quote</Button>
+						<div class="appointment-box"><Button  class="theme-btn appointment-btn" ID="btnquote" data-target="#quotemodal" data-toggle="modal"> <span class="icon flaticon-calendar-1"></span>Request Quote</Button>
+						   
 							<%--<a href="ContactUs.aspx"  class="theme-btn appointment-btn">Request Quote</a>--%>
 						</div>
 						
@@ -214,9 +210,7 @@
 			</div>
 		</div>
 		<!--End Header Lower-->
-			</td>
-		</tr>
-	</table>
+		
 		<%--<asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 		<div class="container">
 			<div class="modal fade" id="mymodal" role="dialog">
@@ -241,7 +235,7 @@
 			</div>
 		</div>--%>
 		<!--End Header Upper-->
-       
+	   
 		
 		
 		<!--Sticky Header-->
@@ -249,7 +243,7 @@
 			<div class="auto-container clearfix">
 				<!--Logo-->
 				<div class="logo pull-left">
-					<a href="index.html" class="img-responsive"><img src="images/image-slider/logoo.png" alt="" title=""></a>
+					<a href="index.html" class="img-responsive"><img src="images/icons/nnlogo.jpg" style="width:280px; height:70px"></a>
 				</div>
 				
 				<!--Right Col-->
@@ -319,7 +313,7 @@
 			<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 			</asp:ContentPlaceHolder>
 		
-	</form>
+	
    <br />
 
 	 <footer class="main-footer">

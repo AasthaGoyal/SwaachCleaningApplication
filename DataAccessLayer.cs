@@ -33,7 +33,14 @@ namespace CleaningApplication
             return name;
         }
 
-        
+        public void addReview(string name, string heading, string review, int stars)
+        {
+            openConnection();
+
+            string query = "insert into tbreviews values ('" + name + "','" + heading + "','" + review + "','" + stars + "')";
+            SqlCommand cmd = new SqlCommand(query, connection);
+            cmd.ExecuteNonQuery();
+        }
 
     }
 }

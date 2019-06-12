@@ -1,8 +1,10 @@
 ﻿	<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="CleaningApplication.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-	
+	<form runat="server">
+
+
 		
-    <section class="main-slider">
+	<section class="main-slider">
 		
 		<div class="main-slider-carousel owl-carousel owl-theme">
 			
@@ -11,7 +13,7 @@
 					<div class="content">
 						<div class="title">Referred for a reason.</div>
 						<h2>Clean Home. <br> Professional Service. <br> Fair Price.</h2>
-						<a href="#" class="theme-btn btn-style-one">About Us</a>
+						<a href="ContactUs.aspx" class="theme-btn btn-style-one">Contact Us</a>
 					</div>
 				</div>
 			</div>
@@ -21,7 +23,7 @@
 					<div class="content alternate">
 						<div class="title">We provide cleaning services at affordable prices</div>
 						<h2>Provides high quality <br> cleaning services</h2>
-						<a href="#" class="theme-btn btn-style-one">Our Services</a>
+						<a href="Services.aspx" class="theme-btn btn-style-one">Our Services</a>
 					</div>
 				</div>
 			</div>
@@ -31,7 +33,7 @@
 					<div class="content">
 						<div class="title ">We make sure that out customer are happy</div>
 						<h2 >Why should you <br> choose us? <br> </h2>
-						<a href="#" class="theme-btn btn-style-two">Read More</a>
+						<a href="WhyUs.aspx" class="theme-btn btn-style-two">Read More</a>
 					</div>
 				</div>
 			</div>
@@ -155,7 +157,7 @@
 					 <button class="close" data-dismiss="modal" style="color: #FFFFFF">&times;</button>
 				</div>
 				<div class="modal-body">
-					<form>
+				
 						<div class="form-group">
 							<label for="name"> Full Name</label>
 							<asp:TextBox runat="server" class="form-control" placeholder="Enter your name" type="text" id="txtname" />
@@ -176,13 +178,13 @@
 							<asp:TextBox runat="server" height="50px" class="form-control" placeholder="Enter your message"  id="txtmessage" />
 
 						</div>
-					</form>
+					
 
 				</div>
 				<div class="modal-footer">
-                    <asp:Label ID="lblMessage" runat="server" Font-Bold="True" ForeColor="#CC0000" ></asp:Label>
-                    <asp:Button ID="btnConfirm" runat="server" Text="Confirm" class="btn btn-primary" OnClick="btnConfirm_Click"/>
-                    <%--<button id="btnConfirm" class="btn btn-primary" AutoPostBack="true" onclick="btnConfirm_onClick" >Submit</button>--%>
+					<asp:Label ID="lblMessage" runat="server" Font-Bold="True" ForeColor="#CC0000" ></asp:Label>
+					<asp:Button ID="btnConfirm" runat="server" Text="Confirm" class="btn btn-primary" OnClick="btnConfirm_Click"/>
+					<%--<button id="btnConfirm" class="btn btn-primary" AutoPostBack="true" onclick="btnConfirm_onClick" >Submit</button>--%>
 					<button class="btn btn-primary" data-dismiss ="modal"> Close</button>
 				</div>
 			</div>
@@ -465,10 +467,13 @@
 				<div class="separator"></div>
 			</div>
 			
-			<%-- <div class="feedback-carousel owl-carousel owl-theme">
-				
-				<!--Feedback Block-->
-			   <div class="feedback-block">
+		 <div class="feedback-carousel owl-carousel owl-theme">
+				<asp:Repeater ID="rpReviews" runat="server" >
+					<HeaderTemplate>
+
+					</HeaderTemplate>
+					<ItemTemplate>
+						  <div class="feedback-block">
 					<div class="inner-box">
 						<div class="image">
 							<a href="carpet-cleaning.html"><img src="images/resource/feedback-1.jpg" alt="" /></a>
@@ -477,139 +482,35 @@
 							<div class="quote-icon">
 								<span class="icon flaticon-two-quotes"></span>
 							</div>
-							<h3><a href="carpet-cleaning.html">andrew Zachery</a></h3>
-							<div class="rating">
+							<h3><a href="carpet-cleaning.html">
+								<asp:Label ID="lblname" runat="server" Text='<%#Eval("customerName") %>'></asp:Label></a></h3>
+							<%--<div class="rating">
 								<span class="fa fa-star-o"></span>
 								<span class="fa fa-star-o"></span>
 								<span class="fa fa-star-o"></span>
 								<span class="fa fa-star-o"></span>
 								<span class="fa fa-star-o"></span>
-							</div>
-							<div class="text">“Exceptional! They did a wonder-ful job, and my home smelled so nice. Now I can't imagine being without them!”</div>
+							</div>--%>
+							<div class="text">
+								<asp:Label ID="lblheading" runat="server" Text='<%#Eval("heading") %>'></asp:Label>
+								<asp:Label ID="lblReview" runat="server" Text='<%#Eval("review") %>'></asp:Label></div>
 						</div>
 					</div>
 				</div>
+					</ItemTemplate>
+					<FooterTemplate>
+
+					</FooterTemplate>
+				</asp:Repeater>
+			
 				
-				<!--Feedback Block-->
-				<div class="feedback-block">
-					<div class="inner-box">
-						<div class="image">
-							<a href="carpet-cleaning.html"><img src="images/resource/feedback-2.jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<div class="quote-icon">
-								<span class="icon flaticon-two-quotes"></span>
-							</div>
-							<h3><a href="carpet-cleaning.html">Liam gabriella</a></h3>
-							<div class="rating">
-								<span class="fa fa-star-o"></span>
-								<span class="fa fa-star-o"></span>
-								<span class="fa fa-star-o"></span>
-								<span class="fa fa-star-o"></span>
-								<span class="fa fa-star-o"></span>
-							</div>
-							<div class="text">“Exceptional! They did a wonder-ful job, and my home smelled so nice. Now I can't imagine being without them!”</div>
-						</div>
-					</div>
-				</div>
-				
-				<!--Feedback Block-->
-				<div class="feedback-block">
-					<div class="inner-box">
-						<div class="image">
-							<a href="carpet-cleaning.html"><img src="images/resource/feedback-3.jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<div class="quote-icon">
-								<span class="icon flaticon-two-quotes"></span>
-							</div>
-							<h3><a href="carpet-cleaning.html">Michel Hunter</a></h3>
-							<div class="rating">
-								<span class="fa fa-star-o"></span>
-								<span class="fa fa-star-o"></span>
-								<span class="fa fa-star-o"></span>
-								<span class="fa fa-star-o"></span>
-								<span class="fa fa-star-o"></span>
-							</div>
-							<div class="text">“Exceptional! They did a wonder-ful job, and my home smelled so nice. Now I can't imagine being without them!”</div>
-						</div>
-					</div>
-				</div>
-				
-				<!--Feedback Block-->
-				<div class="feedback-block">
-					<div class="inner-box">
-						<div class="image">
-							<a href="carpet-cleaning.html"><img src="images/resource/feedback-1.jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<div class="quote-icon">
-								<span class="icon flaticon-two-quotes"></span>
-							</div>
-							<h3><a href="carpet-cleaning.html">andrew Zachery</a></h3>
-							<div class="rating">
-								<span class="fa fa-star-o"></span>
-								<span class="fa fa-star-o"></span>
-								<span class="fa fa-star-o"></span>
-								<span class="fa fa-star-o"></span>
-								<span class="fa fa-star-o"></span>
-							</div>
-							<div class="text">“Exceptional! They did a wonder-ful job, and my home smelled so nice. Now I can't imagine being without them!”</div>
-						</div>
-					</div>
-				</div>
-				
-				<!--Feedback Block-->
-				<div class="feedback-block">
-					<div class="inner-box">
-						<div class="image">
-							<a href="carpet-cleaning.html"><img src="images/resource/feedback-2.jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<div class="quote-icon">
-								<span class="icon flaticon-two-quotes"></span>
-							</div>
-							<h3><a href="carpet-cleaning.html">Liam gabriella</a></h3>
-							<div class="rating">
-								<span class="fa fa-star-o"></span>
-								<span class="fa fa-star-o"></span>
-								<span class="fa fa-star-o"></span>
-								<span class="fa fa-star-o"></span>
-								<span class="fa fa-star-o"></span>
-							</div>
-							<div class="text">“Exceptional! They did a wonder-ful job, and my home smelled so nice. Now I can't imagine being without them!”</div>
-						</div>
-					</div>
-				</div>
-				
-				<!--Feedback Block-->
-				<div class="feedback-block">
-					<div class="inner-box">
-						<div class="image">
-							<a href="carpet-cleaning.html"><img src="images/resource/feedback-3.jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<div class="quote-icon">
-								<span class="icon flaticon-two-quotes"></span>
-							</div>
-							<h3><a href="carpet-cleaning.html">Michel Hunter</a></h3>
-							<div class="rating">
-								<span class="fa fa-star-o"></span>
-								<span class="fa fa-star-o"></span>
-								<span class="fa fa-star-o"></span>
-								<span class="fa fa-star-o"></span>
-								<span class="fa fa-star-o"></span>
-							</div>
-							<div class="text">“Exceptional! They did a wonder-ful job, and my home smelled so nice. Now I can't imagine being without them!”</div>
-						</div>
-					</div>
-				</div>
-				
-			</div>--%>
+			</div>
 			
 		</div>
 	</section>
 	<!--End Feedback Section-->
 
+
+		</form>
 
 	</asp:Content>

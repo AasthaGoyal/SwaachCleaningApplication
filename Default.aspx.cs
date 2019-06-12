@@ -30,7 +30,7 @@ namespace CleaningApplication
             {
 
                 RepeterData();
-
+                getReviews();
 
 
             }
@@ -39,16 +39,13 @@ namespace CleaningApplication
             con.Close();
         }
 
-        protected void btnConfirm_OnClick(object sender, EventArgs e)
-        {
-            lblMessage.Text = "Its working";
-        }
+      
 
         public void RepeterData()
         {
             con.Open();
 
-            cmd = new SqlCommand("Select * from tbcategory", con);
+            cmd = new SqlCommand("Select * from tbcategory order by categoryName asc", con);
             DataSet ds = new DataSet();
             da = new SqlDataAdapter(cmd);
             da.Fill(ds);
@@ -75,9 +72,9 @@ namespace CleaningApplication
             try
             {
                 MailMessage message = new MailMessage();
-                message.To.Add("aastha2150@gmail.com");
+                message.To.Add("swaachclean@gmail.com");
                 message.From = new MailAddress("aastha2150@gmail.com");
-                message.Subject = "A new message received!";
+                message.Subject = "A new 'Request for Quote' received!";
                 message.Body = body;
                 message.IsBodyHtml = true;
                 SmtpClient smtp = new SmtpClient();
@@ -97,6 +94,23 @@ namespace CleaningApplication
             {
                 lblMessage.Text = "* Error! " + ex.Message;
             }
+        }
+
+        public void getReviews()
+        {
+            con.Open();
+
+            cmd = new SqlCommand("Select * from tbreviews", con);
+            DataSet ds = new DataSet();
+            da = new SqlDataAdapter(cmd);
+            da.Fill(ds);
+            rpReviews.DataSource = ds;
+            rpReviews.DataBind();
+
+
+
+            con.Close();
+
         }
     }
 }

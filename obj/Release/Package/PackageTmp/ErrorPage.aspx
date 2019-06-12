@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="ErrorPage.aspx.cs" Inherits="CleaningApplication.WebForm7" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <form runat="server">
+
+ 
     <center>
 
    
@@ -8,4 +11,5 @@
         Sorry, The page is under maintainence currently.
     </h1>
          </center>
+           </form>
 </asp:Content>
