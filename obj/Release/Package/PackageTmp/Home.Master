@@ -50,7 +50,7 @@
 						<ul class="social-nav">
 							<li><a href="https://www.facebook.com/swaach.shah.5"><span class="fa fa-facebook-f"></span></a></li>
 							<li><a href="https://instagram.com/swaachclean9?igshid=1axkv4h53820d"><span class="fa fa-instagram"></span></a></li>
-							<li><a href="#"><span class="fa fa-wechat"></span></a></li>
+							<li><a href="https://twitter.com/CleaningSwaach"><span class="fa fa-twitter"></span></a></li>
 							<%--<li><a href="#"><span class="fa fa-youtube"></span></a></li>--%>
 						</ul>
 					</div>
@@ -84,7 +84,7 @@
 					
 					<div class="pull-left logo-box">
 						<div class="logo"><a href="Default.aspx">
-							<img src="images/icons/nnlogo.jpg" style="width:280px; height:70px"/></a></div>
+							<img src="images/main-slider/leg.png" style="width:280px; height:70px"/></a></div>
 					</div>
 					
 					<div class="pull-right upper-right clearfix">
@@ -93,8 +93,8 @@
 						<div class="upper-column info-box">
 							<div class="icon-box"><span class="flaticon-clock"></span></div>
 							<ul>
-								<li><span>Office Opened</span> <br>Mon-Fri 8:00am - 6:00pm
-									<asp:Label visible="false" ID="lbltime" runat="server" ></asp:Label> </li>
+								<li><span>Office Opened</span> <br>
+									<asp:Label ID="lbltime" runat="server" Font-Size="Medium" ForeColor="#999999" ></asp:Label> </li>
 							</ul>
 							
 						</div>
@@ -102,8 +102,8 @@
 							<div class="icon-box"><span class="flaticon-trip"></span></div>
 							<ul>
 								<li>
-									<a href="https://www.google.com/maps/place/555+Richardson+Rd,+Mount+Roskill,+Auckland+1041/@-36.9197206,174.7327171,17z/data=!3m1!4b1!4m5!3m4!1s0x6d0d467eed12a785:0x7645b4142ec52985!8m2!3d-36.9197249!4d174.7349058"><span> 555 Richardson Road</span> <br /> Mount Roskill, Auckland</a>
-									<asp:Label visible="false" ID="lbladdress" runat="server" ></asp:Label></li>
+									<a href="https://www.google.com/maps/place/555+Richardson+Rd,+Mount+Roskill,+Auckland+1041/@-36.9197206,174.7327171,17z/data=!3m1!4b1!4m5!3m4!1s0x6d0d467eed12a785:0x7645b4142ec52985!8m2!3d-36.9197249!4d174.7349058"><span> <asp:Label ID="lbladdress" runat="server" ></asp:Label></span> <br /> <asp:Label ID="lblsuburb" runat="server" Font-Size="Medium" ForeColor="#999999" ></asp:Label></a>
+									</li>
 							</ul>
 							
 						</div>
@@ -243,7 +243,7 @@
 			<div class="auto-container clearfix">
 				<!--Logo-->
 				<div class="logo pull-left">
-					<a href="index.html" class="img-responsive"><img src="images/icons/nnlogo.jpg" style="width:280px; height:70px"></a>
+					<a href="index.html" class="img-responsive"><img src="images/main-slider/leg.png" style="width:280px; height:70px"></a>
 				</div>
 				
 				<!--Right Col-->
@@ -258,11 +258,11 @@
 						
 						<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent1">
 							<ul class="navigation clearfix">
-								<li class="current dropdown"><a href="Default.aspx">Home</a>
+								<li ><a href="Default.aspx">Home</a>
 								   
 								</li>
-								<li class="dropdown"><a href="Services.aspx">Services</a>
-									<ul>
+								<li ><a href="Services.aspx">Services</a>
+									<%--<ul>
 									   
 											<asp:DataList ID="DataList2" runat="server" DataSourceID="SqlDataSource1">
 												
@@ -279,7 +279,7 @@
 											
 											</asp:DataList>
 											
-									  </ul>
+									  </ul>--%>
 									 
 								
 								

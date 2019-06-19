@@ -216,7 +216,8 @@
 					<div class="process-block col-lg-3 col-md-6 col-sm-12">
 						<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
 							<div class="icon-box">
-								<span class="icon flaticon-spray-1"></span>
+								<span class="icon ">
+									<img src="images/background/wp1.png" height="50px" width="50px" /></span>
 							</div>
 							<div class="number-line">
 								<div class="number">1</div>
@@ -430,7 +431,7 @@
 									<div class="acc-btn"><div class="icon-outer flaticon-tick-inside-circle"></div>Cost effective and Budget oriented</div>
 									<div class="acc-content">
 										<div class="content">
-											<div class="text">We understand that cleaning your house can be a tiring and expensive task, and provide cost effective services to make sure you get your house clean along with saving money.</div>
+											<div class="text">We understand that cleaning your property can be a tiring and expensive task, and we provide cost effective services to make sure you get your house clean along with saving money.</div>
 										</div>
 									</div>
 								</li>

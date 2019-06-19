@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbcleaningModelStoreContainer" CdmEntityContainer="dbcleaningEntities">
+    <EntitySetMapping Name="tbBathrooms">
+      <EntityTypeMapping TypeName="dbcleaningModel.tbBathroom">
+        <MappingFragment StoreEntitySet="tbBathrooms">
+          <ScalarProperty Name="bathroomid" ColumnName="bathroomid" />
+          <ScalarProperty Name="noOfBathrooms" ColumnName="noOfBathrooms" />
+          <ScalarProperty Name="bathPrice" ColumnName="bathPrice" />
+          <ScalarProperty Name="serviceid" ColumnName="serviceid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbBedrooms">
+      <EntityTypeMapping TypeName="dbcleaningModel.tbBedroom">
+        <MappingFragment StoreEntitySet="tbBedrooms">
+          <ScalarProperty Name="bedroomid" ColumnName="bedroomid" />
+          <ScalarProperty Name="noOfBedrooms" ColumnName="noOfBedrooms" />
+          <ScalarProperty Name="bprice" ColumnName="bprice" />
+          <ScalarProperty Name="serviceid" ColumnName="serviceid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbcategories">
+      <EntityTypeMapping TypeName="dbcleaningModel.tbcategory">
+        <MappingFragment StoreEntitySet="tbcategory">
+          <ScalarProperty Name="categoryid" ColumnName="categoryid" />
+          <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+          <ScalarProperty Name="categoryPhoto" ColumnName="categoryPhoto" />
+          <ScalarProperty Name="categoryDesc" ColumnName="categoryDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbCeilings">
+      <EntityTypeMapping TypeName="dbcleaningModel.tbCeiling">
+        <MappingFragment StoreEntitySet="tbCeiling">
+          <ScalarProperty Name="ceilingid" ColumnName="ceilingid" />
+          <ScalarProperty Name="noBeds" ColumnName="noBeds" />
+          <ScalarProperty Name="cprice" ColumnName="cprice" />
+          <ScalarProperty Name="serviceid" ColumnName="serviceid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbExtras">
+      <EntityTypeMapping TypeName="dbcleaningModel.tbExtra">
+        <MappingFragment StoreEntitySet="tbExtras">
+          <ScalarProperty Name="extraid" ColumnName="extraid" />
+          <ScalarProperty Name="extraName" ColumnName="extraName" />
+          <ScalarProperty Name="eprice" ColumnName="eprice" />
+          <ScalarProperty Name="serviceid" ColumnName="serviceid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbGarages">
+      <EntityTypeMapping TypeName="dbcleaningModel.tbGarage">
+        <MappingFragment StoreEntitySet="tbGarage">
+          <ScalarProperty Name="garageid" ColumnName="garageid" />
+          <ScalarProperty Name="noOfGarage" ColumnName="noOfGarage" />
+          <ScalarProperty Name="gPrice" ColumnName="gPrice" />
+          <ScalarProperty Name="serviceid" ColumnName="serviceid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbOvens">
+      <EntityTypeMapping TypeName="dbcleaningModel.tbOven">
+        <MappingFragment StoreEntitySet="tbOven">
+          <ScalarProperty Name="ovenid" ColumnName="ovenid" />
+          <ScalarProperty Name="ovenName" ColumnName="ovenName" />
+          <ScalarProperty Name="oPrice" ColumnName="oPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbreviews">
+      <EntityTypeMapping TypeName="dbcleaningModel.tbreview">
+        <MappingFragment StoreEntitySet="tbreviews">
+          <ScalarProperty Name="reviewid" ColumnName="reviewid" />
+          <ScalarProperty Name="customerName" ColumnName="customerName" />
+          <ScalarProperty Name="heading" ColumnName="heading" />
+          <ScalarProperty Name="review" ColumnName="review" />
+          <ScalarProperty Name="stars" ColumnName="stars" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbservices">
+      <EntityTypeMapping TypeName="dbcleaningModel.tbservice">
+        <MappingFragment StoreEntitySet="tbservices">
+          <ScalarProperty Name="serviceid" ColumnName="serviceid" />
+          <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+          <ScalarProperty Name="serviceDesc" ColumnName="serviceDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbStaffs">
+      <EntityTypeMapping TypeName="dbcleaningModel.tbStaff">
+        <MappingFragment StoreEntitySet="tbStaff">
+          <ScalarProperty Name="staffId" ColumnName="staffId" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="staffAddress" ColumnName="staffAddress" />
+          <ScalarProperty Name="phoneNo" ColumnName="phoneNo" />
+          <ScalarProperty Name="emailid" ColumnName="emailid" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbWindows">
+      <EntityTypeMapping TypeName="dbcleaningModel.tbWindow">
+        <MappingFragment StoreEntitySet="tbWindows">
+          <ScalarProperty Name="windowid" ColumnName="windowid" />
+          <ScalarProperty Name="side" ColumnName="side" />
+          <ScalarProperty Name="noOfBedrooms" ColumnName="noOfBedrooms" />
+          <ScalarProperty Name="wprice" ColumnName="wprice" />
+          <ScalarProperty Name="serviceid" ColumnName="serviceid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbbookings">
+      <EntityTypeMapping TypeName="dbcleaningModel.tbbooking">
+        <MappingFragment StoreEntitySet="tbbooking">
+          <ScalarProperty Name="custAddress" ColumnName="custAddress" />
+          <ScalarProperty Name="custName" ColumnName="custName" />
+          <ScalarProperty Name="custPhoneNo" ColumnName="custPhoneNo" />
+          <ScalarProperty Name="custEmail" ColumnName="custEmail" />
+          <ScalarProperty Name="ddate" ColumnName="ddate" />
+          <ScalarProperty Name="ttime" ColumnName="ttime" />
+          <ScalarProperty Name="categoryid" ColumnName="categoryid" />
+          <ScalarProperty Name="serviceid" ColumnName="serviceid" />
+          <ScalarProperty Name="totalPrice" ColumnName="totalPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbPanels">
+      <EntityTypeMapping TypeName="dbcleaningModel.tbPanel">
+        <MappingFragment StoreEntitySet="tbPanel">
+          <ScalarProperty Name="companyName" ColumnName="companyName" />
+          <ScalarProperty Name="phoneNo" ColumnName="phoneNo" />
+          <ScalarProperty Name="companyAddress" ColumnName="companyAddress" />
+          <ScalarProperty Name="timings" ColumnName="timings" />
+          <ScalarProperty Name="aboutUs" ColumnName="aboutUs" />
+          <ScalarProperty Name="companyEmail" ColumnName="companyEmail" />
+          <ScalarProperty Name="logo" ColumnName="logo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

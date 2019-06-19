@@ -14,8 +14,10 @@ namespace CleaningApplication
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        public SqlConnection con = null;
-        String connectionString = null;
+        
+        String connectionString =  ConfigurationManager.ConnectionStrings["dbcleaningConnectionString"].ConnectionString;
+
+
         SqlCommand cmd;
        
         SqlDataAdapter da;
@@ -23,9 +25,7 @@ namespace CleaningApplication
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            connectionString = ConfigurationManager.ConnectionStrings["dbcleaningConnectionString"].ConnectionString;
-            con = new SqlConnection(connectionString);
-
+           
             if (!IsPostBack)
             {
 
@@ -36,16 +36,17 @@ namespace CleaningApplication
             }
             
 
-            con.Close();
+          
         }
 
       
 
         public void RepeterData()
         {
+            SqlConnection con = new SqlConnection(connectionString);
             con.Open();
 
-            cmd = new SqlCommand("Select * from tbcategory order by categoryName asc", con);
+            cmd = new SqlCommand("Select * from tbcategory order by rank asc", con);
             DataSet ds = new DataSet();
             da = new SqlDataAdapter(cmd);
             da.Fill(ds);
@@ -98,6 +99,7 @@ namespace CleaningApplication
 
         public void getReviews()
         {
+            SqlConnection con = new SqlConnection(connectionString);
             con.Open();
 
             cmd = new SqlCommand("Select * from tbreviews", con);

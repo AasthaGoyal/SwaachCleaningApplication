@@ -40,6 +40,15 @@ namespace CleaningApplication {
         protected global::System.Web.UI.WebControls.Label lbladdress;
         
         /// <summary>
+        /// lblsuburb control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblsuburb;
+        
+        /// <summary>
         /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
@@ -56,15 +65,6 @@ namespace CleaningApplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblphone;
-        
-        /// <summary>
-        /// DataList2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataList2;
         
         /// <summary>
         /// ContentPlaceHolder1 control.

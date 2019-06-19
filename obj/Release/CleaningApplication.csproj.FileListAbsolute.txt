@@ -55,3 +55,7 @@ E:\CleaningApplication\CleaningApplication\obj\Release\CleaningApplication.cspro
 E:\CleaningApplication\CleaningApplication\obj\Release\CleaningApplication.dll
 E:\CleaningApplication\CleaningApplication\obj\Release\CleaningApplication.pdb
 E:\CleaningApplication\CleaningApplication\bin\AjaxControlToolkit.dll
+E:\CleaningApplication\CleaningApplication\bin\EntityFramework.dll
+E:\CleaningApplication\CleaningApplication\bin\EntityFramework.SqlServer.dll
+E:\CleaningApplication\CleaningApplication\bin\EntityFramework.xml
+E:\CleaningApplication\CleaningApplication\bin\EntityFramework.SqlServer.xml

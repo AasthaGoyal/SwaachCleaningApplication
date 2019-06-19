@@ -1,0 +1,813 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="dbcleaningModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbBathrooms">
+          <Key>
+            <PropertyRef Name="bathroomid" />
+          </Key>
+          <Property Name="bathroomid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="noOfBathrooms" Type="int" Nullable="false" />
+          <Property Name="bathPrice" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="serviceid" Type="int" />
+        </EntityType>
+        <EntityType Name="tbBedrooms">
+          <Key>
+            <PropertyRef Name="bedroomid" />
+          </Key>
+          <Property Name="bedroomid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="noOfBedrooms" Type="int" Nullable="false" />
+          <Property Name="bprice" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="serviceid" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'dbcleaning.dbo.tbbooking' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="tbbooking">
+          <Key>
+            <PropertyRef Name="custAddress" />
+            <PropertyRef Name="custName" />
+            <PropertyRef Name="ddate" />
+            <PropertyRef Name="ttime" />
+          </Key>
+          <Property Name="custAddress" Type="varchar" MaxLength="125" Nullable="false" />
+          <Property Name="custName" Type="varchar" MaxLength="125" Nullable="false" />
+          <Property Name="custPhoneNo" Type="varchar" MaxLength="125" />
+          <Property Name="custEmail" Type="varchar" MaxLength="125" />
+          <Property Name="ddate" Type="date" Nullable="false" />
+          <Property Name="ttime" Type="time" Precision="7" Nullable="false" />
+          <Property Name="categoryid" Type="int" />
+          <Property Name="serviceid" Type="int" />
+          <Property Name="totalPrice" Type="decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="tbcategory">
+          <Key>
+            <PropertyRef Name="categoryid" />
+          </Key>
+          <Property Name="categoryid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="categoryName" Type="varchar" MaxLength="125" Nullable="false" />
+          <Property Name="categoryPhoto" Type="varchar" MaxLength="125" />
+          <Property Name="categoryDesc" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="tbCeiling">
+          <Key>
+            <PropertyRef Name="ceilingid" />
+          </Key>
+          <Property Name="ceilingid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="noBeds" Type="int" Nullable="false" />
+          <Property Name="cprice" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="serviceid" Type="int" />
+        </EntityType>
+        <EntityType Name="tbExtras">
+          <Key>
+            <PropertyRef Name="extraid" />
+          </Key>
+          <Property Name="extraid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="extraName" Type="varchar" MaxLength="125" Nullable="false" />
+          <Property Name="eprice" Type="int" Nullable="false" />
+          <Property Name="serviceid" Type="int" />
+        </EntityType>
+        <EntityType Name="tbGarage">
+          <Key>
+            <PropertyRef Name="garageid" />
+          </Key>
+          <Property Name="garageid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="noOfGarage" Type="int" Nullable="false" />
+          <Property Name="gPrice" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="serviceid" Type="int" />
+        </EntityType>
+        <EntityType Name="tbOven">
+          <Key>
+            <PropertyRef Name="ovenid" />
+          </Key>
+          <Property Name="ovenid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ovenName" Type="varchar" MaxLength="125" Nullable="false" />
+          <Property Name="oPrice" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'dbcleaning.dbo.tbPanel' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="tbPanel">
+          <Key>
+            <PropertyRef Name="companyName" />
+            <PropertyRef Name="phoneNo" />
+            <PropertyRef Name="companyAddress" />
+            <PropertyRef Name="timings" />
+          </Key>
+          <Property Name="companyName" Type="varchar" MaxLength="125" Nullable="false" />
+          <Property Name="phoneNo" Type="varchar" MaxLength="125" Nullable="false" />
+          <Property Name="companyAddress" Type="varchar" MaxLength="125" Nullable="false" />
+          <Property Name="timings" Type="varchar" MaxLength="125" Nullable="false" />
+          <Property Name="aboutUs" Type="varchar" MaxLength="200" />
+          <Property Name="companyEmail" Type="varchar" MaxLength="125" />
+          <Property Name="logo" Type="varchar" MaxLength="125" />
+        </EntityType>
+        <EntityType Name="tbreviews">
+          <Key>
+            <PropertyRef Name="reviewid" />
+          </Key>
+          <Property Name="reviewid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="customerName" Type="varchar" MaxLength="125" />
+          <Property Name="heading" Type="varchar" MaxLength="125" />
+          <Property Name="review" Type="varchar" MaxLength="500" />
+          <Property Name="stars" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbservices">
+          <Key>
+            <PropertyRef Name="serviceid" />
+          </Key>
+          <Property Name="serviceid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="categoryId" Type="int" />
+          <Property Name="serviceDesc" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="tbStaff">
+          <Key>
+            <PropertyRef Name="staffId" />
+          </Key>
+          <Property Name="staffId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fullname" Type="varchar" MaxLength="125" Nullable="false" />
+          <Property Name="staffAddress" Type="varchar" MaxLength="200" />
+          <Property Name="phoneNo" Type="int" />
+          <Property Name="emailid" Type="varchar" MaxLength="125" Nullable="false" />
+          <Property Name="position" Type="varchar" MaxLength="125" />
+          <Property Name="photo" Type="varchar" MaxLength="125" />
+        </EntityType>
+        <EntityType Name="tbWindows">
+          <Key>
+            <PropertyRef Name="windowid" />
+          </Key>
+          <Property Name="windowid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="side" Type="varchar" MaxLength="125" Nullable="false" />
+          <Property Name="noOfBedrooms" Type="int" Nullable="false" />
+          <Property Name="wprice" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="serviceid" Type="int" />
+        </EntityType>
+        <Association Name="baserviceidFK">
+          <End Role="tbservices" Type="Self.tbservices" Multiplicity="0..1" />
+          <End Role="tbBathrooms" Type="Self.tbBathrooms" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbservices">
+              <PropertyRef Name="serviceid" />
+            </Principal>
+            <Dependent Role="tbBathrooms">
+              <PropertyRef Name="serviceid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="bookingcategoryidFk">
+          <End Role="tbcategory" Type="Self.tbcategory" Multiplicity="0..1" />
+          <End Role="tbbooking" Type="Self.tbbooking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbcategory">
+              <PropertyRef Name="categoryid" />
+            </Principal>
+            <Dependent Role="tbbooking">
+              <PropertyRef Name="categoryid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="bookingserviceidFK">
+          <End Role="tbservices" Type="Self.tbservices" Multiplicity="0..1" />
+          <End Role="tbbooking" Type="Self.tbbooking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbservices">
+              <PropertyRef Name="serviceid" />
+            </Principal>
+            <Dependent Role="tbbooking">
+              <PropertyRef Name="serviceid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="bserviceidFK">
+          <End Role="tbservices" Type="Self.tbservices" Multiplicity="0..1" />
+          <End Role="tbBedrooms" Type="Self.tbBedrooms" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbservices">
+              <PropertyRef Name="serviceid" />
+            </Principal>
+            <Dependent Role="tbBedrooms">
+              <PropertyRef Name="serviceid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="categoryidFk">
+          <End Role="tbcategory" Type="Self.tbcategory" Multiplicity="0..1" />
+          <End Role="tbservices" Type="Self.tbservices" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbcategory">
+              <PropertyRef Name="categoryid" />
+            </Principal>
+            <Dependent Role="tbservices">
+              <PropertyRef Name="categoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="eserviceidFK">
+          <End Role="tbservices" Type="Self.tbservices" Multiplicity="0..1" />
+          <End Role="tbExtras" Type="Self.tbExtras" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbservices">
+              <PropertyRef Name="serviceid" />
+            </Principal>
+            <Dependent Role="tbExtras">
+              <PropertyRef Name="serviceid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="gserviceidFK">
+          <End Role="tbservices" Type="Self.tbservices" Multiplicity="0..1" />
+          <End Role="tbGarage" Type="Self.tbGarage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbservices">
+              <PropertyRef Name="serviceid" />
+            </Principal>
+            <Dependent Role="tbGarage">
+              <PropertyRef Name="serviceid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="serviceidFK">
+          <End Role="tbservices" Type="Self.tbservices" Multiplicity="0..1" />
+          <End Role="tbCeiling" Type="Self.tbCeiling" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbservices">
+              <PropertyRef Name="serviceid" />
+            </Principal>
+            <Dependent Role="tbCeiling">
+              <PropertyRef Name="serviceid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="wserviceidFK">
+          <End Role="tbservices" Type="Self.tbservices" Multiplicity="0..1" />
+          <End Role="tbWindows" Type="Self.tbWindows" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbservices">
+              <PropertyRef Name="serviceid" />
+            </Principal>
+            <Dependent Role="tbWindows">
+              <PropertyRef Name="serviceid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="dbcleaningModelStoreContainer">
+          <EntitySet Name="tbBathrooms" EntityType="Self.tbBathrooms" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbBedrooms" EntityType="Self.tbBedrooms" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbcategory" EntityType="Self.tbcategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbCeiling" EntityType="Self.tbCeiling" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbExtras" EntityType="Self.tbExtras" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbGarage" EntityType="Self.tbGarage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbOven" EntityType="Self.tbOven" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbreviews" EntityType="Self.tbreviews" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbservices" EntityType="Self.tbservices" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbStaff" EntityType="Self.tbStaff" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbWindows" EntityType="Self.tbWindows" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbbooking" EntityType="Self.tbbooking" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tbbooking].[custAddress] AS [custAddress], 
+    [tbbooking].[custName] AS [custName], 
+    [tbbooking].[custPhoneNo] AS [custPhoneNo], 
+    [tbbooking].[custEmail] AS [custEmail], 
+    [tbbooking].[ddate] AS [ddate], 
+    [tbbooking].[ttime] AS [ttime], 
+    [tbbooking].[categoryid] AS [categoryid], 
+    [tbbooking].[serviceid] AS [serviceid], 
+    [tbbooking].[totalPrice] AS [totalPrice]
+    FROM [dbo].[tbbooking] AS [tbbooking]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="tbPanel" EntityType="Self.tbPanel" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tbPanel].[companyName] AS [companyName], 
+    [tbPanel].[phoneNo] AS [phoneNo], 
+    [tbPanel].[companyAddress] AS [companyAddress], 
+    [tbPanel].[timings] AS [timings], 
+    [tbPanel].[aboutUs] AS [aboutUs], 
+    [tbPanel].[companyEmail] AS [companyEmail], 
+    [tbPanel].[logo] AS [logo]
+    FROM [dbo].[tbPanel] AS [tbPanel]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="baserviceidFK" Association="Self.baserviceidFK">
+            <End Role="tbservices" EntitySet="tbservices" />
+            <End Role="tbBathrooms" EntitySet="tbBathrooms" />
+          </AssociationSet>
+          <AssociationSet Name="bookingcategoryidFk" Association="Self.bookingcategoryidFk">
+            <End Role="tbcategory" EntitySet="tbcategory" />
+            <End Role="tbbooking" EntitySet="tbbooking" />
+          </AssociationSet>
+          <AssociationSet Name="bookingserviceidFK" Association="Self.bookingserviceidFK">
+            <End Role="tbservices" EntitySet="tbservices" />
+            <End Role="tbbooking" EntitySet="tbbooking" />
+          </AssociationSet>
+          <AssociationSet Name="bserviceidFK" Association="Self.bserviceidFK">
+            <End Role="tbservices" EntitySet="tbservices" />
+            <End Role="tbBedrooms" EntitySet="tbBedrooms" />
+          </AssociationSet>
+          <AssociationSet Name="categoryidFk" Association="Self.categoryidFk">
+            <End Role="tbcategory" EntitySet="tbcategory" />
+            <End Role="tbservices" EntitySet="tbservices" />
+          </AssociationSet>
+          <AssociationSet Name="eserviceidFK" Association="Self.eserviceidFK">
+            <End Role="tbservices" EntitySet="tbservices" />
+            <End Role="tbExtras" EntitySet="tbExtras" />
+          </AssociationSet>
+          <AssociationSet Name="gserviceidFK" Association="Self.gserviceidFK">
+            <End Role="tbservices" EntitySet="tbservices" />
+            <End Role="tbGarage" EntitySet="tbGarage" />
+          </AssociationSet>
+          <AssociationSet Name="serviceidFK" Association="Self.serviceidFK">
+            <End Role="tbservices" EntitySet="tbservices" />
+            <End Role="tbCeiling" EntitySet="tbCeiling" />
+          </AssociationSet>
+          <AssociationSet Name="wserviceidFK" Association="Self.wserviceidFK">
+            <End Role="tbservices" EntitySet="tbservices" />
+            <End Role="tbWindows" EntitySet="tbWindows" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbcleaningModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbBathroom">
+          <Key>
+            <PropertyRef Name="bathroomid" />
+          </Key>
+          <Property Name="bathroomid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="noOfBathrooms" Type="Int32" Nullable="false" />
+          <Property Name="bathPrice" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="serviceid" Type="Int32" />
+          <NavigationProperty Name="tbservice" Relationship="Self.baserviceidFK" FromRole="tbBathrooms" ToRole="tbservices" />
+        </EntityType>
+        <EntityType Name="tbBedroom">
+          <Key>
+            <PropertyRef Name="bedroomid" />
+          </Key>
+          <Property Name="bedroomid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="noOfBedrooms" Type="Int32" Nullable="false" />
+          <Property Name="bprice" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="serviceid" Type="Int32" />
+          <NavigationProperty Name="tbservice" Relationship="Self.bserviceidFK" FromRole="tbBedrooms" ToRole="tbservices" />
+        </EntityType>
+        <EntityType Name="tbcategory">
+          <Key>
+            <PropertyRef Name="categoryid" />
+          </Key>
+          <Property Name="categoryid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="categoryName" Type="String" MaxLength="125" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="categoryPhoto" Type="String" MaxLength="125" FixedLength="false" Unicode="false" />
+          <Property Name="categoryDesc" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tbbookings" Relationship="Self.bookingcategoryidFk" FromRole="tbcategory" ToRole="tbbooking" />
+          <NavigationProperty Name="tbservices" Relationship="Self.categoryidFk" FromRole="tbcategory" ToRole="tbservices" />
+        </EntityType>
+        <EntityType Name="tbCeiling">
+          <Key>
+            <PropertyRef Name="ceilingid" />
+          </Key>
+          <Property Name="ceilingid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="noBeds" Type="Int32" Nullable="false" />
+          <Property Name="cprice" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="serviceid" Type="Int32" />
+          <NavigationProperty Name="tbservice" Relationship="Self.serviceidFK" FromRole="tbCeiling" ToRole="tbservices" />
+        </EntityType>
+        <EntityType Name="tbExtra">
+          <Key>
+            <PropertyRef Name="extraid" />
+          </Key>
+          <Property Name="extraid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="extraName" Type="String" MaxLength="125" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="eprice" Type="Int32" Nullable="false" />
+          <Property Name="serviceid" Type="Int32" />
+          <NavigationProperty Name="tbservice" Relationship="Self.eserviceidFK" FromRole="tbExtras" ToRole="tbservices" />
+        </EntityType>
+        <EntityType Name="tbGarage">
+          <Key>
+            <PropertyRef Name="garageid" />
+          </Key>
+          <Property Name="garageid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="noOfGarage" Type="Int32" Nullable="false" />
+          <Property Name="gPrice" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="serviceid" Type="Int32" />
+          <NavigationProperty Name="tbservice" Relationship="Self.gserviceidFK" FromRole="tbGarage" ToRole="tbservices" />
+        </EntityType>
+        <EntityType Name="tbOven">
+          <Key>
+            <PropertyRef Name="ovenid" />
+          </Key>
+          <Property Name="ovenid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ovenName" Type="String" MaxLength="125" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="oPrice" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbreview">
+          <Key>
+            <PropertyRef Name="reviewid" />
+          </Key>
+          <Property Name="reviewid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="customerName" Type="String" MaxLength="125" FixedLength="false" Unicode="false" />
+          <Property Name="heading" Type="String" MaxLength="125" FixedLength="false" Unicode="false" />
+          <Property Name="review" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="stars" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbservice">
+          <Key>
+            <PropertyRef Name="serviceid" />
+          </Key>
+          <Property Name="serviceid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="categoryId" Type="Int32" />
+          <Property Name="serviceDesc" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tbBathrooms" Relationship="Self.baserviceidFK" FromRole="tbservices" ToRole="tbBathrooms" />
+          <NavigationProperty Name="tbBedrooms" Relationship="Self.bserviceidFK" FromRole="tbservices" ToRole="tbBedrooms" />
+          <NavigationProperty Name="tbcategory" Relationship="Self.categoryidFk" FromRole="tbservices" ToRole="tbcategory" />
+          <NavigationProperty Name="tbCeilings" Relationship="Self.serviceidFK" FromRole="tbservices" ToRole="tbCeiling" />
+          <NavigationProperty Name="tbExtras" Relationship="Self.eserviceidFK" FromRole="tbservices" ToRole="tbExtras" />
+          <NavigationProperty Name="tbGarages" Relationship="Self.gserviceidFK" FromRole="tbservices" ToRole="tbGarage" />
+          <NavigationProperty Name="tbbookings" Relationship="Self.bookingserviceidFK" FromRole="tbservices" ToRole="tbbooking" />
+          <NavigationProperty Name="tbWindows" Relationship="Self.wserviceidFK" FromRole="tbservices" ToRole="tbWindows" />
+        </EntityType>
+        <EntityType Name="tbStaff">
+          <Key>
+            <PropertyRef Name="staffId" />
+          </Key>
+          <Property Name="staffId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fullname" Type="String" MaxLength="125" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="staffAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="phoneNo" Type="Int32" />
+          <Property Name="emailid" Type="String" MaxLength="125" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="position" Type="String" MaxLength="125" FixedLength="false" Unicode="false" />
+          <Property Name="photo" Type="String" MaxLength="125" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbWindow">
+          <Key>
+            <PropertyRef Name="windowid" />
+          </Key>
+          <Property Name="windowid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="side" Type="String" MaxLength="125" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="noOfBedrooms" Type="Int32" Nullable="false" />
+          <Property Name="wprice" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="serviceid" Type="Int32" />
+          <NavigationProperty Name="tbservice" Relationship="Self.wserviceidFK" FromRole="tbWindows" ToRole="tbservices" />
+        </EntityType>
+        <EntityType Name="tbbooking">
+          <Key>
+            <PropertyRef Name="custAddress" />
+            <PropertyRef Name="custName" />
+            <PropertyRef Name="ddate" />
+            <PropertyRef Name="ttime" />
+          </Key>
+          <Property Name="custAddress" Type="String" MaxLength="125" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="custName" Type="String" MaxLength="125" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="custPhoneNo" Type="String" MaxLength="125" FixedLength="false" Unicode="false" />
+          <Property Name="custEmail" Type="String" MaxLength="125" FixedLength="false" Unicode="false" />
+          <Property Name="ddate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ttime" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="categoryid" Type="Int32" />
+          <Property Name="serviceid" Type="Int32" />
+          <Property Name="totalPrice" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="tbcategory" Relationship="Self.bookingcategoryidFk" FromRole="tbbooking" ToRole="tbcategory" />
+          <NavigationProperty Name="tbservice" Relationship="Self.bookingserviceidFK" FromRole="tbbooking" ToRole="tbservices" />
+        </EntityType>
+        <EntityType Name="tbPanel">
+          <Key>
+            <PropertyRef Name="companyName" />
+            <PropertyRef Name="phoneNo" />
+            <PropertyRef Name="companyAddress" />
+            <PropertyRef Name="timings" />
+          </Key>
+          <Property Name="companyName" Type="String" MaxLength="125" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="phoneNo" Type="String" MaxLength="125" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="companyAddress" Type="String" MaxLength="125" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="timings" Type="String" MaxLength="125" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="aboutUs" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="companyEmail" Type="String" MaxLength="125" FixedLength="false" Unicode="false" />
+          <Property Name="logo" Type="String" MaxLength="125" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="baserviceidFK">
+          <End Role="tbservices" Type="Self.tbservice" Multiplicity="0..1" />
+          <End Role="tbBathrooms" Type="Self.tbBathroom" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbservices">
+              <PropertyRef Name="serviceid" />
+            </Principal>
+            <Dependent Role="tbBathrooms">
+              <PropertyRef Name="serviceid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="bserviceidFK">
+          <End Role="tbservices" Type="Self.tbservice" Multiplicity="0..1" />
+          <End Role="tbBedrooms" Type="Self.tbBedroom" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbservices">
+              <PropertyRef Name="serviceid" />
+            </Principal>
+            <Dependent Role="tbBedrooms">
+              <PropertyRef Name="serviceid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="bookingcategoryidFk">
+          <End Role="tbcategory" Type="Self.tbcategory" Multiplicity="0..1" />
+          <End Role="tbbooking" Type="Self.tbbooking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbcategory">
+              <PropertyRef Name="categoryid" />
+            </Principal>
+            <Dependent Role="tbbooking">
+              <PropertyRef Name="categoryid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="categoryidFk">
+          <End Role="tbcategory" Type="Self.tbcategory" Multiplicity="0..1" />
+          <End Role="tbservices" Type="Self.tbservice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbcategory">
+              <PropertyRef Name="categoryid" />
+            </Principal>
+            <Dependent Role="tbservices">
+              <PropertyRef Name="categoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="serviceidFK">
+          <End Role="tbservices" Type="Self.tbservice" Multiplicity="0..1" />
+          <End Role="tbCeiling" Type="Self.tbCeiling" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbservices">
+              <PropertyRef Name="serviceid" />
+            </Principal>
+            <Dependent Role="tbCeiling">
+              <PropertyRef Name="serviceid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="eserviceidFK">
+          <End Role="tbservices" Type="Self.tbservice" Multiplicity="0..1" />
+          <End Role="tbExtras" Type="Self.tbExtra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbservices">
+              <PropertyRef Name="serviceid" />
+            </Principal>
+            <Dependent Role="tbExtras">
+              <PropertyRef Name="serviceid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="gserviceidFK">
+          <End Role="tbservices" Type="Self.tbservice" Multiplicity="0..1" />
+          <End Role="tbGarage" Type="Self.tbGarage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbservices">
+              <PropertyRef Name="serviceid" />
+            </Principal>
+            <Dependent Role="tbGarage">
+              <PropertyRef Name="serviceid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="bookingserviceidFK">
+          <End Role="tbservices" Type="Self.tbservice" Multiplicity="0..1" />
+          <End Role="tbbooking" Type="Self.tbbooking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbservices">
+              <PropertyRef Name="serviceid" />
+            </Principal>
+            <Dependent Role="tbbooking">
+              <PropertyRef Name="serviceid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="wserviceidFK">
+          <End Role="tbservices" Type="Self.tbservice" Multiplicity="0..1" />
+          <End Role="tbWindows" Type="Self.tbWindow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbservices">
+              <PropertyRef Name="serviceid" />
+            </Principal>
+            <Dependent Role="tbWindows">
+              <PropertyRef Name="serviceid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="dbcleaningEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbBathrooms" EntityType="Self.tbBathroom" />
+          <EntitySet Name="tbBedrooms" EntityType="Self.tbBedroom" />
+          <EntitySet Name="tbcategories" EntityType="Self.tbcategory" />
+          <EntitySet Name="tbCeilings" EntityType="Self.tbCeiling" />
+          <EntitySet Name="tbExtras" EntityType="Self.tbExtra" />
+          <EntitySet Name="tbGarages" EntityType="Self.tbGarage" />
+          <EntitySet Name="tbOvens" EntityType="Self.tbOven" />
+          <EntitySet Name="tbreviews" EntityType="Self.tbreview" />
+          <EntitySet Name="tbservices" EntityType="Self.tbservice" />
+          <EntitySet Name="tbStaffs" EntityType="Self.tbStaff" />
+          <EntitySet Name="tbWindows" EntityType="Self.tbWindow" />
+          <EntitySet Name="tbbookings" EntityType="Self.tbbooking" />
+          <EntitySet Name="tbPanels" EntityType="Self.tbPanel" />
+          <AssociationSet Name="baserviceidFK" Association="Self.baserviceidFK">
+            <End Role="tbservices" EntitySet="tbservices" />
+            <End Role="tbBathrooms" EntitySet="tbBathrooms" />
+          </AssociationSet>
+          <AssociationSet Name="bserviceidFK" Association="Self.bserviceidFK">
+            <End Role="tbservices" EntitySet="tbservices" />
+            <End Role="tbBedrooms" EntitySet="tbBedrooms" />
+          </AssociationSet>
+          <AssociationSet Name="bookingcategoryidFk" Association="Self.bookingcategoryidFk">
+            <End Role="tbcategory" EntitySet="tbcategories" />
+            <End Role="tbbooking" EntitySet="tbbookings" />
+          </AssociationSet>
+          <AssociationSet Name="categoryidFk" Association="Self.categoryidFk">
+            <End Role="tbcategory" EntitySet="tbcategories" />
+            <End Role="tbservices" EntitySet="tbservices" />
+          </AssociationSet>
+          <AssociationSet Name="serviceidFK" Association="Self.serviceidFK">
+            <End Role="tbservices" EntitySet="tbservices" />
+            <End Role="tbCeiling" EntitySet="tbCeilings" />
+          </AssociationSet>
+          <AssociationSet Name="eserviceidFK" Association="Self.eserviceidFK">
+            <End Role="tbservices" EntitySet="tbservices" />
+            <End Role="tbExtras" EntitySet="tbExtras" />
+          </AssociationSet>
+          <AssociationSet Name="gserviceidFK" Association="Self.gserviceidFK">
+            <End Role="tbservices" EntitySet="tbservices" />
+            <End Role="tbGarage" EntitySet="tbGarages" />
+          </AssociationSet>
+          <AssociationSet Name="bookingserviceidFK" Association="Self.bookingserviceidFK">
+            <End Role="tbservices" EntitySet="tbservices" />
+            <End Role="tbbooking" EntitySet="tbbookings" />
+          </AssociationSet>
+          <AssociationSet Name="wserviceidFK" Association="Self.wserviceidFK">
+            <End Role="tbservices" EntitySet="tbservices" />
+            <End Role="tbWindows" EntitySet="tbWindows" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dbcleaningModelStoreContainer" CdmEntityContainer="dbcleaningEntities">
+          <EntitySetMapping Name="tbBathrooms">
+            <EntityTypeMapping TypeName="dbcleaningModel.tbBathroom">
+              <MappingFragment StoreEntitySet="tbBathrooms">
+                <ScalarProperty Name="bathroomid" ColumnName="bathroomid" />
+                <ScalarProperty Name="noOfBathrooms" ColumnName="noOfBathrooms" />
+                <ScalarProperty Name="bathPrice" ColumnName="bathPrice" />
+                <ScalarProperty Name="serviceid" ColumnName="serviceid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbBedrooms">
+            <EntityTypeMapping TypeName="dbcleaningModel.tbBedroom">
+              <MappingFragment StoreEntitySet="tbBedrooms">
+                <ScalarProperty Name="bedroomid" ColumnName="bedroomid" />
+                <ScalarProperty Name="noOfBedrooms" ColumnName="noOfBedrooms" />
+                <ScalarProperty Name="bprice" ColumnName="bprice" />
+                <ScalarProperty Name="serviceid" ColumnName="serviceid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbcategories">
+            <EntityTypeMapping TypeName="dbcleaningModel.tbcategory">
+              <MappingFragment StoreEntitySet="tbcategory">
+                <ScalarProperty Name="categoryid" ColumnName="categoryid" />
+                <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+                <ScalarProperty Name="categoryPhoto" ColumnName="categoryPhoto" />
+                <ScalarProperty Name="categoryDesc" ColumnName="categoryDesc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbCeilings">
+            <EntityTypeMapping TypeName="dbcleaningModel.tbCeiling">
+              <MappingFragment StoreEntitySet="tbCeiling">
+                <ScalarProperty Name="ceilingid" ColumnName="ceilingid" />
+                <ScalarProperty Name="noBeds" ColumnName="noBeds" />
+                <ScalarProperty Name="cprice" ColumnName="cprice" />
+                <ScalarProperty Name="serviceid" ColumnName="serviceid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbExtras">
+            <EntityTypeMapping TypeName="dbcleaningModel.tbExtra">
+              <MappingFragment StoreEntitySet="tbExtras">
+                <ScalarProperty Name="extraid" ColumnName="extraid" />
+                <ScalarProperty Name="extraName" ColumnName="extraName" />
+                <ScalarProperty Name="eprice" ColumnName="eprice" />
+                <ScalarProperty Name="serviceid" ColumnName="serviceid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbGarages">
+            <EntityTypeMapping TypeName="dbcleaningModel.tbGarage">
+              <MappingFragment StoreEntitySet="tbGarage">
+                <ScalarProperty Name="garageid" ColumnName="garageid" />
+                <ScalarProperty Name="noOfGarage" ColumnName="noOfGarage" />
+                <ScalarProperty Name="gPrice" ColumnName="gPrice" />
+                <ScalarProperty Name="serviceid" ColumnName="serviceid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbOvens">
+            <EntityTypeMapping TypeName="dbcleaningModel.tbOven">
+              <MappingFragment StoreEntitySet="tbOven">
+                <ScalarProperty Name="ovenid" ColumnName="ovenid" />
+                <ScalarProperty Name="ovenName" ColumnName="ovenName" />
+                <ScalarProperty Name="oPrice" ColumnName="oPrice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbreviews">
+            <EntityTypeMapping TypeName="dbcleaningModel.tbreview">
+              <MappingFragment StoreEntitySet="tbreviews">
+                <ScalarProperty Name="reviewid" ColumnName="reviewid" />
+                <ScalarProperty Name="customerName" ColumnName="customerName" />
+                <ScalarProperty Name="heading" ColumnName="heading" />
+                <ScalarProperty Name="review" ColumnName="review" />
+                <ScalarProperty Name="stars" ColumnName="stars" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbservices">
+            <EntityTypeMapping TypeName="dbcleaningModel.tbservice">
+              <MappingFragment StoreEntitySet="tbservices">
+                <ScalarProperty Name="serviceid" ColumnName="serviceid" />
+                <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+                <ScalarProperty Name="serviceDesc" ColumnName="serviceDesc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbStaffs">
+            <EntityTypeMapping TypeName="dbcleaningModel.tbStaff">
+              <MappingFragment StoreEntitySet="tbStaff">
+                <ScalarProperty Name="staffId" ColumnName="staffId" />
+                <ScalarProperty Name="fullname" ColumnName="fullname" />
+                <ScalarProperty Name="staffAddress" ColumnName="staffAddress" />
+                <ScalarProperty Name="phoneNo" ColumnName="phoneNo" />
+                <ScalarProperty Name="emailid" ColumnName="emailid" />
+                <ScalarProperty Name="position" ColumnName="position" />
+                <ScalarProperty Name="photo" ColumnName="photo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbWindows">
+            <EntityTypeMapping TypeName="dbcleaningModel.tbWindow">
+              <MappingFragment StoreEntitySet="tbWindows">
+                <ScalarProperty Name="windowid" ColumnName="windowid" />
+                <ScalarProperty Name="side" ColumnName="side" />
+                <ScalarProperty Name="noOfBedrooms" ColumnName="noOfBedrooms" />
+                <ScalarProperty Name="wprice" ColumnName="wprice" />
+                <ScalarProperty Name="serviceid" ColumnName="serviceid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbbookings">
+            <EntityTypeMapping TypeName="dbcleaningModel.tbbooking">
+              <MappingFragment StoreEntitySet="tbbooking">
+                <ScalarProperty Name="custAddress" ColumnName="custAddress" />
+                <ScalarProperty Name="custName" ColumnName="custName" />
+                <ScalarProperty Name="custPhoneNo" ColumnName="custPhoneNo" />
+                <ScalarProperty Name="custEmail" ColumnName="custEmail" />
+                <ScalarProperty Name="ddate" ColumnName="ddate" />
+                <ScalarProperty Name="ttime" ColumnName="ttime" />
+                <ScalarProperty Name="categoryid" ColumnName="categoryid" />
+                <ScalarProperty Name="serviceid" ColumnName="serviceid" />
+                <ScalarProperty Name="totalPrice" ColumnName="totalPrice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbPanels">
+            <EntityTypeMapping TypeName="dbcleaningModel.tbPanel">
+              <MappingFragment StoreEntitySet="tbPanel">
+                <ScalarProperty Name="companyName" ColumnName="companyName" />
+                <ScalarProperty Name="phoneNo" ColumnName="phoneNo" />
+                <ScalarProperty Name="companyAddress" ColumnName="companyAddress" />
+                <ScalarProperty Name="timings" ColumnName="timings" />
+                <ScalarProperty Name="aboutUs" ColumnName="aboutUs" />
+                <ScalarProperty Name="companyEmail" ColumnName="companyEmail" />
+                <ScalarProperty Name="logo" ColumnName="logo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

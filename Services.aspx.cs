@@ -38,7 +38,7 @@ namespace CleaningApplication
         {
             con.Open();
 
-            cmd = new SqlCommand("Select * from tbcategory order by categoryName asc", con);
+            cmd = new SqlCommand("Select * from tbcategory order by rank asc", con);
             DataSet ds = new DataSet();
             da = new SqlDataAdapter(cmd);
             da.Fill(ds);

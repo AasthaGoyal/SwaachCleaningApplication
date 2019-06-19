@@ -48,10 +48,13 @@ E:\CleaningApplication\CleaningApplication\bin\roslyn\vbc.rsp
 E:\CleaningApplication\CleaningApplication\bin\roslyn\VBCSCompiler.exe
 E:\CleaningApplication\CleaningApplication\bin\roslyn\VBCSCompiler.exe.config
 E:\CleaningApplication\CleaningApplication\bin\AjaxControlToolkit.dll
+E:\CleaningApplication\CleaningApplication\bin\EntityFramework.dll
+E:\CleaningApplication\CleaningApplication\bin\EntityFramework.SqlServer.dll
 E:\CleaningApplication\CleaningApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\CleaningApplication\CleaningApplication\bin\EntityFramework.xml
+E:\CleaningApplication\CleaningApplication\bin\EntityFramework.SqlServer.xml
 E:\CleaningApplication\CleaningApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 E:\CleaningApplication\CleaningApplication\obj\Debug\CleaningApplication.csproj.CoreCompileInputs.cache
 E:\CleaningApplication\CleaningApplication\obj\Debug\CleaningApplication.csproj.CopyComplete
 E:\CleaningApplication\CleaningApplication\obj\Debug\CleaningApplication.dll
 E:\CleaningApplication\CleaningApplication\obj\Debug\CleaningApplication.pdb
-E:\CleaningApplication\CleaningApplication\obj\Debug\CleaningApplication.csprojAssemblyReference.cache

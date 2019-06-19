@@ -25,7 +25,7 @@ namespace CleaningApplication
         {
             SqlConnection conn = new SqlConnection(connectionString);
 
-            string query = "select logo, companyName, phoneNo, companyAddress, timings, aboutUs, companyEmail from tbPanel";
+            string query = "select logo, companyName, phoneNo, companyAddress, timings, aboutUs, companyEmail, suburb from tbPanel";
 
             SqlCommand cmd = new SqlCommand(query, conn);
             conn.Open();
@@ -47,6 +47,7 @@ namespace CleaningApplication
                     lblfaddress.Text = reader.GetString(3);
                     footerImage.ImageUrl = reader.GetString(0);
                     lblAboutus.Text = reader.GetString(5);
+                    lblsuburb.Text = reader.GetString(7);
                 }
             }
         }
