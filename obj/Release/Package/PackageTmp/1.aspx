@@ -57,18 +57,18 @@
 	 
   </asp:table>
 	<hr />
-    <br />
-    <asp:Table ID="total" runat="server" CssClass="form-control">
-        <asp:TableRow Width="100%">
-            <asp:TableCell Width="90%"  style="text-align:left">
-                Total Price:
-            </asp:TableCell>
-            <asp:TableCell Width="10%"  style="text-align:right">
-                <asp:Label ID="lblTotal" runat="server"></asp:Label>
-            </asp:TableCell>
+	<br />
+	<asp:Table ID="total" runat="server" CssClass="form-control">
+		<asp:TableRow Width="100%">
+			<asp:TableCell Width="90%"  style="text-align:left">
+				Total Price:
+			</asp:TableCell>
+			<asp:TableCell Width="10%"  style="text-align:right">
+				<asp:Label ID="lblTotal" runat="server"></asp:Label>
+			</asp:TableCell>
 
-        </asp:TableRow>
-    </asp:Table>
+		</asp:TableRow>
+	</asp:Table>
 	
 	   
 

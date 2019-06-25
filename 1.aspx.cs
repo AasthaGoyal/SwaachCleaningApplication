@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -16,24 +17,24 @@ namespace CleaningApplication
         int id;
         string connectionString = ConfigurationManager.ConnectionStrings["dbcleaningConnectionString"].ConnectionString;
         SqlConnection connection;
-        SqlDataAdapter da;
-        
+
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
             id = 1;
             categoryDetails();
 
-            
-                getBedrooms();
-                getBathrooms();
-                getCeiling();
-                getWindows();
-                getGarage();
-                getExtras();
-           
-            
-           
+
+            getBedrooms();
+            getBathrooms();
+            getCeiling();
+            getWindows();
+            getGarage();
+            getExtras();
+
+
+
         }
 
         public void categoryDetails()
@@ -74,7 +75,7 @@ namespace CleaningApplication
             {
                 while (reader.Read())
                 {
-                   
+
                     dpBedrooms.Items.Add(reader.GetInt32(0).ToString() + " Bedroom(s) - $ " + reader.GetDecimal(1).ToString());
 
                 }
@@ -163,26 +164,29 @@ namespace CleaningApplication
                 while (reader.Read())
                 {
 
-                    cbWindows.Items.Add(reader.GetInt32(1).ToString() + " Bedrooms(s) side (" + reader.GetString(0)  + ") - $ " + reader.GetDecimal(2).ToString());
+                    cbWindows.Items.Add(reader.GetInt32(1).ToString() + " Bedrooms(s) side (" + reader.GetString(0) + ") - $ " + reader.GetDecimal(2).ToString());
 
                 }
             }
 
         }
 
-        
 
-       
+
+
 
         protected void btnclick_Click(object sender, EventArgs e)
         {
-            
+
+            List<int> totalPrice = new List<int>();
 
             TableRow row = new TableRow();
             TableCell cell1 = new TableCell();
-            string[] name= dpBedrooms.SelectedItem.Text.Split('-');
+            string[] name = dpBedrooms.SelectedItem.Text.Split('-');
             cell1.Text = name[0];
             TableCell cell2 = new TableCell();
+          
+            totalPrice.Add(Convert.ToInt32(name[1].Substring(3)));
             cell2.Text = name[1];
             row.Cells.Add(cell1);
             row.Cells.Add(cell2);
@@ -193,6 +197,7 @@ namespace CleaningApplication
             TableCell cell3 = new TableCell();
             cell3.Text = bath[0];
             TableCell cell4 = new TableCell();
+            totalPrice.Add(Convert.ToInt32(bath[1].Substring(3)));
             cell4.Text = bath[1];
             row2.Cells.Add(cell3);
             row2.Cells.Add(cell4);
@@ -201,9 +206,14 @@ namespace CleaningApplication
             if (cbExtraToilet.Checked)
             {
                 TableRow roww = new TableRow();
+                string[] extraToilet = cbExtraToilet.Text.Split('-');
                 TableCell celll = new TableCell();
-                celll.Text = cbExtraToilet.Text;
+                celll.Text = extraToilet[0];
+                TableCell celll2 = new TableCell();
+                totalPrice.Add(Convert.ToInt32(extraToilet[1].Substring(3)));
+                celll2.Text = extraToilet[1];
                 roww.Cells.Add(celll);
+                roww.Cells.Add(celll2);
                 myTable.Rows.Add(roww);
             }
 
@@ -212,28 +222,30 @@ namespace CleaningApplication
             TableCell cell5 = new TableCell();
             cell5.Text = garage[0];
             TableCell cell6 = new TableCell();
+            totalPrice.Add(Convert.ToInt32(garage[1].Substring(3)));
             cell6.Text = garage[1];
             row3.Cells.Add(cell5);
             row3.Cells.Add(cell6);
             myTable.Rows.Add(row3);
 
-           
+
             List<ListItem> selected = new List<ListItem>();
-            foreach(ListItem item in cbWindows.Items)
+            foreach (ListItem item in cbWindows.Items)
             {
-                if(item.Selected)
+                if (item.Selected)
                 {
                     selected.Add(item);
                 }
             }
 
-            foreach(ListItem item in selected)
+            foreach (ListItem item in selected)
             {
                 TableRow rw = new TableRow();
                 string[] windows = item.ToString().Split('-');
                 TableCell cell7 = new TableCell();
                 cell7.Text = windows[0];
                 TableCell cell8 = new TableCell();
+                totalPrice.Add(Convert.ToInt32(windows[1].Substring(3)));
                 cell8.Text = windows[1];
 
                 rw.Cells.Add(cell7);
@@ -246,12 +258,13 @@ namespace CleaningApplication
             TableCell ccell1 = new TableCell();
             ccell1.Text = ceiling[0];
             TableCell ccell2 = new TableCell();
+            totalPrice.Add(Convert.ToInt32(ceiling[1].Substring(3)));
             ccell2.Text = ceiling[1];
             crow.Cells.Add(ccell1);
             crow.Cells.Add(ccell2);
             myTable.Rows.Add(crow);
 
-            
+
             List<ListItem> extraSelected = new List<ListItem>();
             foreach (ListItem item in cbExtras.Items)
             {
@@ -263,11 +276,12 @@ namespace CleaningApplication
 
             foreach (ListItem item in extraSelected)
             {
-                TableRow erow  = new TableRow();
+                TableRow erow = new TableRow();
                 string[] extras = item.ToString().Split('-');
                 TableCell ecell1 = new TableCell();
                 ecell1.Text = extras[0];
                 TableCell ecell2 = new TableCell();
+                totalPrice.Add(Convert.ToInt32(extras[1].Substring(3)));
                 ecell2.Text = extras[1];
 
                 erow.Cells.Add(ecell1);
@@ -275,24 +289,17 @@ namespace CleaningApplication
                 myTable.Rows.Add(erow);
             }
 
-            double totalPrice = 0;
-            TableRowCollection t = myTable.Rows;
-            foreach(TableRow r in t)
+           
+            int subtotal=0;
+            foreach(int item in totalPrice)
             {
-                string key = r.Cells[1].Text;
-                string[] dollar = key.ToString().Split(' ');
-                //     totalPrice = Convert.ToInt32(dollar[2].ToString());
-                //  lblTotal.Text = dollar[2].ToString();
-                string amount = dollar[2].ToString();
-                double amountt = Convert.ToDouble(amount);
-                totalPrice = totalPrice + amountt;
-                //lblTotal.Text = lblTotal.Text + amount;
+                subtotal = subtotal + item;
             }
-
-           lblTotal.Text = totalPrice.ToString();
+            lblTotal.Text = "$" + subtotal.ToString();
+            
         }
 
-        
+
 
         public void getExtras()
         {
@@ -318,5 +325,5 @@ namespace CleaningApplication
 
     }
 
-    
+
 }
