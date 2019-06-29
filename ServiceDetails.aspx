@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ServicesNested.master" AutoEventWireup="true" CodeBehind="ServiceDetails.aspx.cs" Inherits="CleaningApplication.WebForm3" %>
+﻿ <%@ Page Title="" Language="C#" MasterPageFile="~/ServicesNested.master" AutoEventWireup="true" CodeBehind="ServiceDetails.aspx.cs" Inherits="CleaningApplication.WebForm3" %>
 <%--<asp:Content ID="Content1" ContentPlaceHolderID="Cont1" runat="server">
 	<h2>
 		
@@ -20,7 +20,7 @@
 	<br />
 	Number of Bathrooms:
 	<asp:DropDownList class="form-control" ID="dpBathrooms" runat="server"></asp:DropDownList>
-	<asp:CheckBox ID="cbExtraToilet" runat="server" Text="Extra Toilet - $30"  />
+        <asp:CheckBoxList ID="cbBathroomExtras" runat="server"></asp:CheckBoxList>
 	<br />
 	Number of Garages:
 	<asp:DropDownList class="form-control" ID="dpGarages" runat="server"></asp:DropDownList>
@@ -35,6 +35,15 @@
 	<asp:CheckBoxList ID="CheckBoxList1" runat="server" ></asp:CheckBoxList>
 	<br />
     </asp:Panel>
+    <asp:panel ID="pncarpet" Visible="false" runat="server">
+         <asp:DropDownList ID="dpCarpet" CssClass="form-control" runat="server"></asp:DropDownList>
+	<br />
+	Enter the Area Sq Meters:
+	<asp:TextBox ID="txtarea" class="form-control" runat="server"  ></asp:TextBox>
+	<br />
+        <asp:CheckBoxList ID="cbCarpetExtras" runat="server"></asp:CheckBoxList>
+        <br />
+    </asp:panel>
     <asp:Panel ID="pnExtra" runat="server">
         <asp:CheckBoxList ID="cbExtras" runat="server"></asp:CheckBoxList>
     </asp:Panel>

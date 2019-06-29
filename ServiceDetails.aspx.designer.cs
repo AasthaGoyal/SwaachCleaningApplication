@@ -49,13 +49,13 @@ namespace CleaningApplication {
         protected global::System.Web.UI.WebControls.DropDownList dpBathrooms;
         
         /// <summary>
-        /// cbExtraToilet control.
+        /// cbBathroomExtras control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox cbExtraToilet;
+        protected global::System.Web.UI.WebControls.CheckBoxList cbBathroomExtras;
         
         /// <summary>
         /// dpGarages control.
@@ -92,6 +92,42 @@ namespace CleaningApplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBoxList CheckBoxList1;
+        
+        /// <summary>
+        /// pncarpet control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pncarpet;
+        
+        /// <summary>
+        /// dpCarpet control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dpCarpet;
+        
+        /// <summary>
+        /// txtarea control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtarea;
+        
+        /// <summary>
+        /// cbCarpetExtras control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBoxList cbCarpetExtras;
         
         /// <summary>
         /// pnExtra control.
