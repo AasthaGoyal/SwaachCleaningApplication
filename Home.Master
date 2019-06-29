@@ -25,9 +25,9 @@
 			height: 123px;
 		}
 	</style>
-	<asp:ContentPlaceHolder runat="server" ID="head">
+	<%--<asp:ContentPlaceHolder runat="server" ID="head">
 
-	</asp:ContentPlaceHolder>
+	</asp:ContentPlaceHolder>--%>
 </head>
 <body>
 	<div class="page-wrapper">
@@ -148,7 +148,7 @@
 						
 						<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
 							<ul class="navigation clearfix">
-								<li class="current "><a href="Default.aspx">Home</a>
+								<li id="currentNav" class="current" ><a href="Default.aspx">Home</a>
 									
 								</li>
 								<li><a href="Services.aspx">Services</a>

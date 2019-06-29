@@ -10,105 +10,96 @@
 namespace CleaningApplication {
     
     
-    public partial class Home {
+    public partial class WebForm9 {
         
         /// <summary>
-        /// lbltime control.
+        /// dpCarpet control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbltime;
+        protected global::System.Web.UI.WebControls.DropDownList dpCarpet;
         
         /// <summary>
-        /// lbladdress control.
+        /// txtarea control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbladdress;
+        protected global::System.Web.UI.WebControls.TextBox txtarea;
         
         /// <summary>
-        /// lblsuburb control.
+        /// cbExtra control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblsuburb;
+        protected global::System.Web.UI.WebControls.CheckBox cbExtra;
         
         /// <summary>
-        /// SqlDataSource1 control.
+        /// btnClick control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.Button btnClick;
         
         /// <summary>
-        /// lblphone control.
+        /// ScriptManager1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblphone;
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// UpdatePanel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// lblAboutus control.
+        /// myTable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAboutus;
+        protected global::System.Web.UI.WebControls.Table myTable;
         
         /// <summary>
-        /// lblfphone control.
+        /// total control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblfphone;
+        protected global::System.Web.UI.WebControls.Table total;
         
         /// <summary>
-        /// lblfemail control.
+        /// lblTotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblfemail;
+        protected global::System.Web.UI.WebControls.Label lblTotal;
         
         /// <summary>
-        /// lblfaddress control.
+        /// btnBook control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblfaddress;
-        
-        /// <summary>
-        /// footerImage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image footerImage;
+        protected global::System.Web.UI.WebControls.Button btnBook;
     }
 }

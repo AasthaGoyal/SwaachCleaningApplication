@@ -1,15 +1,12 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="ServicesNested.master.cs" Inherits="CleaningApplication.ServicesNested" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-	  
-</asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 	<form runat="server">
 	<section class="page-title" style="background-image:url(images/background/3.jpg)">
 		<div class="auto-container">
-			<asp:ContentPlaceHolder runat="server" id="Cont1">
-
-			</asp:ContentPlaceHolder>
-			
+	
+				<h2><asp:Label ID="lblname"  runat="server" ></asp:Label></h2>
+            
 		</div>
 	</section>
 		
@@ -21,15 +18,14 @@
 				<div class="content-side col-lg-8 col-md-12 col-sm-12">
 					<div class="services-single">
 						<div class="inner-box">
-							<asp:ContentPlaceHolder runat="server" id ="Cont2">
-
-							</asp:ContentPlaceHolder>
+							
+								<h3>Services/<asp:Label ID="lblname2"  runat="server" ></asp:Label></h3>
+							
 							
 							<div class="text">
-								<asp:ContentPlaceHolder runat="server" id ="Cont3">
-
-							</asp:ContentPlaceHolder>
-							
+								
+									<p> <asp:label runat="server" id="lblDesc"></asp:label></p>
+						
 								
 								<%--<div class="row clearfix">
 									
@@ -73,6 +69,9 @@
 									<asp:label runat="server"  id="lblDetailedDesc"></asp:label>
 								</div>--%>
 							</div>
+                           
+                                <asp:Image ID="img" height="250px" runat="server" class="form-control"/>
+                           
 							<%--<ul class="list-style-two">
 								<li>To prevent injuries due to tripping or slipping</li>
 								<li>To remove grit and sand which scratch and wear down the surface.</li>
@@ -156,7 +155,8 @@
 							<!--Buckets Section-->
 							<div class="buckets-section">
 								<div class="sec-title medium">
-									<h2>Customize the options to see the exact price: </h2>
+									<h2>
+                                        <asp:Label ID="lblcustomize" runat="server" Text="Customize the options to see the exact price: "></asp:Label></h2>
 									<div class="separator"></div>
 								</div>
 
@@ -246,7 +246,7 @@
 
 										</HeaderTemplate>
 										<ItemTemplate>
-											<li>  <a href="<%#Eval("categoryid") %>.aspx"><asp:Label runat="server" id="lblServiceName" Text='<%#Eval("categoryName") %>'></asp:Label></a></li>
+											<li>  <a href="ServiceDetails?categoryid=<%#Eval("categoryid") %>"><asp:Label runat="server" id="lblServiceName" Text='<%#Eval("categoryName") %>'></asp:Label></a></li>
 										</ItemTemplate>
 										<FooterTemplate>
 

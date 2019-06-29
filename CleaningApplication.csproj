@@ -342,15 +342,15 @@
     <Content Include="Web.config" />
     <Content Include="Default.aspx" />
     <Content Include="Services.aspx" />
-    <Content Include="ServiceDetails.aspx" />
     <Content Include="ContactUs.aspx" />
     <Content Include="ErrorPage.aspx" />
-    <Content Include="2.aspx" />
     <Content Include="Reviews.aspx" />
     <Content Include="AddReview.aspx" />
     <Content Include="Process.aspx" />
     <Content Include="Process2.aspx" />
-    <Content Include="1.aspx" />
+    <Content Include="EndOfTenancy.aspx" />
+    <Content Include="ServiceDetails.aspx" />
+    <Content Include="Carpet.aspx" />
     <Content Include="WhyUs.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -393,13 +393,6 @@
     <Compile Include="Services.aspx.designer.cs">
       <DependentUpon>Services.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ServiceDetails.aspx.cs">
-      <DependentUpon>ServiceDetails.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ServiceDetails.aspx.designer.cs">
-      <DependentUpon>ServiceDetails.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ContactUs.aspx.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -420,13 +413,6 @@
     </Compile>
     <Compile Include="ErrorPage.aspx.designer.cs">
       <DependentUpon>ErrorPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="2.aspx.cs">
-      <DependentUpon>2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="2.aspx.designer.cs">
-      <DependentUpon>2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Reviews.aspx.cs">
       <DependentUpon>Reviews.aspx</DependentUpon>
@@ -495,12 +481,26 @@
     <Compile Include="tbWindow.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="1.aspx.cs">
-      <DependentUpon>1.aspx</DependentUpon>
+    <Compile Include="EndOfTenancy.aspx.cs">
+      <DependentUpon>EndOfTenancy.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="1.aspx.designer.cs">
-      <DependentUpon>1.aspx</DependentUpon>
+    <Compile Include="EndOfTenancy.aspx.designer.cs">
+      <DependentUpon>EndOfTenancy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceDetails.aspx.cs">
+      <DependentUpon>ServiceDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServiceDetails.aspx.designer.cs">
+      <DependentUpon>ServiceDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Carpet.aspx.cs">
+      <DependentUpon>Carpet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Carpet.aspx.designer.cs">
+      <DependentUpon>Carpet.aspx</DependentUpon>
     </Compile>
     <Compile Include="WhyUs.aspx.cs">
       <DependentUpon>WhyUs.aspx</DependentUpon>

@@ -16,25 +16,58 @@ namespace CleaningApplication
     {
         DataAccessLayer dao = new DataAccessLayer();
        
-        int id;
+
         string connectionString = ConfigurationManager.ConnectionStrings["dbcleaningConnectionString"].ConnectionString;
         SqlConnection connection;
         SqlDataAdapter da;
+       
+        int id;
 
         protected void Page_Load(object sender, EventArgs e)
         {
              id = Convert.ToInt32(Request.QueryString["categoryid"]);
              connection = new SqlConnection(connectionString);
-         
 
-            if(!IsPostBack)
+            categoryDetails();
+            if (!IsPostBack)
             {
                 getAllcategories();
             }
+
+          
+            
             
         }
 
      
+
+        public void categoryDetails()
+        {
+            string name="", desc="", image = "";
+            connection = new SqlConnection(connectionString);
+            connection.Open();
+            string query = "select categoryName, categoryDesc, categoryPhoto from tbcategory where categoryid ='" + id + "'";
+
+            SqlCommand cmd = new SqlCommand(query, connection);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    name = reader.GetString(0);
+                    desc = reader.GetString(1);
+                    image = reader.GetString(2);
+                }
+            }
+            lblname.Text = name;
+            lblname2.Text = name;
+            lblDesc.Text = desc;
+            img.ImageUrl = image;
+            connection.Close();
+        }
+
         public void getAllcategories()
         {
             connection.Open();

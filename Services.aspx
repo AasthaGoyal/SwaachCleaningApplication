@@ -36,7 +36,7 @@
 						 <div class="services-block-four col-lg-4 col-md-6 col-sm-12">
 					<div class="inner-box">
 						<div class="upper-content">
-							<h3><a href="<%#Eval("categoryid") %>.aspx">
+							<h3><a href="ServiceDetails.aspx?categoryid=<%#Eval("categoryid") %>">
 								<asp:Label ID="Label1" runat="server" Text='<%#Eval("categoryName") %>'></asp:Label></a></h3>
 							<div class="text"><asp:Label ID="Label2" runat="server" Text='<%#Eval("categoryDesc") %>'></asp:Label></div>
 							<div class="icon-box">
@@ -45,7 +45,7 @@
 						</div>
 						<div class="lower-content">
 							<div class="image">
-								<a  href="<%#Eval("categoryid") %>.aspx"><img src='<%#Eval("categoryPhoto") %>' alt="" style="width:370px; height:198px"/></a>
+								<a  href="ServiceDetails.aspx?categoryid=<%#Eval("categoryid") %>"><img src='<%#Eval("categoryPhoto") %>' alt="" style="width:370px; height:198px"/></a>
 							</div>
 						</div>
 					</div>

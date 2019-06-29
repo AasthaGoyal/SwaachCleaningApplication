@@ -13,19 +13,15 @@ namespace CleaningApplication
     public partial class WebForm8 : System.Web.UI.Page
     {
         DataAccessLayer dao = new DataAccessLayer();
-        string name, desc;
-        int id;
+     
         string connectionString = ConfigurationManager.ConnectionStrings["dbcleaningConnectionString"].ConnectionString;
-        SqlConnection connection;
+       
 
 
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            id = 1;
-            categoryDetails();
-
-
+           
             getBedrooms();
             getBathrooms();
             getCeiling();
@@ -37,30 +33,7 @@ namespace CleaningApplication
 
         }
 
-        public void categoryDetails()
-        {
-            connection = new SqlConnection(connectionString);
-            connection.Open();
-            string query = "select categoryName, categoryDesc from tbcategory where categoryid ='" + id + "'";
-
-            SqlCommand cmd = new SqlCommand(query, connection);
-
-            SqlDataReader reader = cmd.ExecuteReader();
-
-            if (reader.HasRows)
-            {
-                while (reader.Read())
-                {
-                    name = reader.GetString(0);
-                    desc = reader.GetString(1);
-                }
-            }
-            lblname.Text = name;
-            lblname2.Text = name;
-            lblDesc.Text = desc;
-            connection.Close();
-        }
-
+       
         public void getBedrooms()
         {
             SqlConnection connection = new SqlConnection(connectionString);
@@ -307,7 +280,7 @@ namespace CleaningApplication
             connection.Open();
 
 
-            string query = "select extraName, eprice from tbExtras";
+            string query = "select extraName, eprice from tbExtras where serviceid =6";
             SqlCommand cmd = new SqlCommand(query, connection);
             SqlDataReader reader = cmd.ExecuteReader();
 

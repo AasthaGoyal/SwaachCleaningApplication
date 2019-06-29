@@ -220,7 +220,7 @@
 				</div>
 				
 				<!--Blocks Column-->
-                <div class="blocks-column col-lg-9 col-md-12 col-sm-12">
+				<div class="blocks-column col-lg-9 col-md-12 col-sm-12">
 					<div class="inner-column">
 						<div class="three-item-carousel owl-carousel owl-theme">
 				<asp:Repeater runat="server" ID="repStaff">
@@ -256,7 +256,7 @@
 
 								</FooterTemplate>
 							</asp:Repeater>
-                            </div>
+							</div>
 					</div>
 				</div>
 						
@@ -265,27 +265,27 @@
 		</div>
 	</section>
 
-      <section class="reviews-section">
-    	<div class="auto-container">
-        	<!--Title Box-->
-            <div class="title-box">
-            	<h2>What our Customers Say</h2>
-               
-                <div class="text">“See what our customers say and how did they find our services”</div>
-            </div>
-               </div>
-           </section>
+	  <section class="reviews-section">
+		<div class="auto-container">
+			<!--Title Box-->
+			<div class="title-box">
+				<h2>What our Customers Say</h2>
+			   
+				<div class="text">“See what our customers say and how did they find our services”</div>
+			</div>
+			   </div>
+		   </section>
 
-        <section class="testimonial-page-section">
-    	<div class="auto-container">
-        	<div class=" row clearfix">
+		<section class="testimonial-page-section">
+		<div class="auto-container">
+			<div class=" row clearfix">
 				
-                <!--Testimonial Block Three-->
-                 <asp:Repeater runat="server" ID="rpReviews" >
-                               <HeaderTemplate>
+				<!--Testimonial Block Three-->
+				 <asp:Repeater runat="server" ID="rpReviews" >
+							   <HeaderTemplate>
 
-                               </HeaderTemplate>
-                               <ItemTemplate>
+							   </HeaderTemplate>
+							   <ItemTemplate>
 				<!--Testimonial Block Three-->
 				<div class="testimonial-block-three masonry-item col-lg-4 col-md-6 col-sm-12">
 					<div class="inner-box">
@@ -293,27 +293,27 @@
 							<span class="icon flaticon-two-quotes"></span>
 						</div>
 						
-                        <br />
+						<br />
 						<h3>
-                            <asp:Label ID="lblname" runat="server" Text='<%#Eval("heading")%>'></asp:Label></h3>
+							<asp:Label ID="lblname" runat="server" Text='<%#Eval("heading")%>'></asp:Label></h3>
 						<div class="text">
-                             <asp:Label ID="lblreview" runat="server" Text='<%#Eval("review") %>'></asp:Label></div>
-                        <br />
-                         - <b><asp:Label ID="lblHeading" runat="server" Text='<%#Eval("customerName")%>'></asp:Label></b>  
-                         
+							 <asp:Label ID="lblreview" runat="server" Text='<%#Eval("review") %>'></asp:Label></div>
+						<br />
+						 - <b><asp:Label ID="lblHeading" runat="server" Text='<%#Eval("customerName")%>'></asp:Label></b>  
+						 
 
 					</div>
-                    
+					
 				</div>
 				
-             </ItemTemplate>
-                               <FooterTemplate>
+			 </ItemTemplate>
+							   <FooterTemplate>
 
-                               </FooterTemplate>
-                           </asp:Repeater>
-                
-           </div>
-         </div>
-    </section>
+							   </FooterTemplate>
+						   </asp:Repeater>
+				
+		   </div>
+		 </div>
+	</section>
 	</form>
 </asp:Content>
