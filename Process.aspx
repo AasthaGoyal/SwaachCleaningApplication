@@ -1,327 +1,222 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="Process.aspx.cs" Inherits="CleaningApplication.WebForm11" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="Process.aspx.cs" Inherits="CleaningApplication.WebForm12" %>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <section class="page-title" style="background-image:url(images/background/3.jpg)">
-    	<div class="auto-container">
-        	<h2>How it works?</h2>
+    <form runat="server">
+
+   
+    <section class="process-section" style="background-image:url(images/background/1.jpg)">
+		<div class="top-layer"></div>
+		<div class="auto-container">
+			<!--Sec Title-->
+			<div class="sec-title centered">
+				<div class="icon-box">
+					<span class="icon flaticon-broom"></span>
+				</div>
+				<h2>our Work Process</h2>
+				<div class="separator"></div>
+			</div>
+			
+			<!--Process Blocks-->
+			<div class="process-blocks">
+				<div class="clearfix row">
+					
+					<!--Process Block-->
+					<div class="process-block col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+							<div class="icon-box">
+								<span class="icon ">
+									<img src="images/background/wp1.png" height="80px" width="80px" /></span>
+							</div>
+							<div class="number-line">
+								<div class="number">1</div>
+							</div>
+							<div class="text">Get a quote. Send us a email or call us to get an estimated quote of the services you require</div>
+						</div>
+					</div>
+					
+					<!--Process Block-->
+					<div class="process-block col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+							<div class="icon-box">
+								<span class="icon flaticon-brush-2"></span>
+							</div>
+							<div class="number-line">
+								<div class="number">2</div>
+							</div>
+							<div class="text">Select the services by looking at our service page</div>
+						</div>
+					</div>
+					
+					<!--Process Block-->
+					<div class="process-block col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+							<div class="icon-box">
+								<span class="icon ">
+									<img src="images/background/w3.png" height="80px" width="80px"/>
+								</span>
+							</div>
+							<div class="number-line">
+								<div class="number">3</div>
+							</div>
+							<div class="text">All the services require a pre-payment of atleast 30%. The payment would be made before the service. </div>
+						</div>
+					</div>
+					
+					<!--Process Block-->
+					<div class="process-block col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+							<div class="icon-box">
+								<span class="icon flaticon-spray-1">
+									
+								</span>
+							</div>
+							<div class="number-line">
+								<div class="number">4</div>
+							</div>
+							<div class="text">Get the service done</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		  </div>
+        </section>
+			
+	
+	<br />
+        <div class="container form-control">
+
+        
+    <table >
+        <tr>
+            <td colspan="2">
+                
+                      <h3 class="text-center"> Step 1: <asp:Label ID="lblname1" runat="server" ></asp:Label></h3>
+                <br />
+               
+            </td>
+        </tr>
+        <tr>
+            <td width="70%" class="text-center" > 
+                <asp:Label ID="lblprocess1" runat="server" ></asp:Label>
+                 </td>
+            <td width="30%" rowspan="2"> <img  src="images/main-slider/pro1.png" class="float-center" width="300px" height="300px"/>
+                    
+            </td>
+        </tr>
+        <tr>
+            <td>  <div class="form-group" style="text-align: right">
+
+                  <asp:Button ID="btnProcess1" runat="server" class="btn-primary form-control theme-btn book-btn"  Text="Get a Quote" /></div>
+            
+              </td>
+        </tr>
+       </table>
+
+            <table>
+
+        <tr>
+             <td colspan="2">
+                
+                      <h3 class="text-center"> Step 2: <asp:Label ID="lblname2" runat="server" ></asp:Label></h3>
+                
+              
+            </td>
+        </tr>
+        <tr>
+              <td rowspan="2" width="40%"> <img  src="images/main-slider/pro2.jpg" class="float-left" width="350px" height="400px"/></td>
+             <td width="60%" class="text-center" > 
+                <asp:Label ID="lblProcess2" runat="server" ></asp:Label>
+                 </td>
+        </tr>
+                <tr>
+                     <td>  <div style="text-align: right">
+
+                  <asp:Button ID="btnProcess2" runat="server" class="btn-primary form-control theme-btn book-btn"  Text="See all services" /></div>
+            
+              </td>
+                </tr>
+                </table>
+
+             <table width="100%" >
+        <tr>
+            <td colspan="2">
+                
+                      <h3 class="text-center"> Step 3: <asp:Label ID="lblname3" runat="server" ></asp:Label></h3>
+                <br />
+               
+            </td>
+        </tr>
+        <tr>
+            <td width="70%" class="text-center" > 
+                <asp:Label ID="lblprocess3" runat="server" ></asp:Label>
+                 </td>
+            <td width="30%" rowspan="2"> <img  src="images/main-slider/pro3.png" class="float-center" width="300px" height="300px"/>
+                    
+            </td>
+        </tr>
+        <tr>
+            <td>  <div class="form-group" style="text-align: right">
+
+                  <asp:Button ID="btnProcess3" runat="server" class="btn-primary form-control theme-btn book-btn"  Text="Read more" /></div>
+            
+              </td>
+        </tr>
+       </table>
+
+            <%-- <table >
+
+         <tr>
+            <td colspan="2">
+                
+                      <h3 class="text-center"> Step 3: <asp:Label ID="lblname3" runat="server" ></asp:Label></h3>
+                
+            </td>
+        </tr>
+       <tr>
+            <td width="70%" class="text-center" > 
+                <asp:Label ID="lblprocess3" runat="server" ></asp:Label>
+                 </td>
+            <td width="30%" rowspan="2"> <img  src="images/main-slider/pro3.png" class="float-right" width="300px" height="300px"/></td>
+        </tr>
+               <tr>
+                     <td>  <div class="form-group" style="text-align: right">
+
+                  <asp:Button ID="btnProcess3" runat="server" class="btn-primary form-control theme-btn book-btn"  Text="Read more" /></div>
+            
+              </td>
+                </tr>
+                </table>--%>
+              
+
+
+            <table>
+         <tr>
+            
+             <td colspan="2">
+                
+                      <h3 class="text-center"> Step 4: <asp:Label ID="lblname4" runat="server" ></asp:Label></h3>
+                
+              
+            </td>
+        </tr>
+        <tr>
+              <td width="40%" rowspan="2"> <img  src="images/main-slider/pro4.png" class="float-left" width="350px" height="300px"/></td>
+             <td width="60%" class="text-center" > 
+                <asp:Label ID="lblprocess4" runat="server" ></asp:Label>
+                 </td>
+        </tr>
+                <tr>
+                     <td>  <div class="form-group" style="text-align: right">
+
+                  <asp:Button ID="btnProcess4" runat="server" class="btn-primary form-control theme-btn book-btn"  Text="Read our reviews" /></div>
+            
+              </td>
+                </tr>
+
+    </table>
         </div>
-    </section>
-
-    <section class="faq-page-section">
-    	<div class="auto-container">
-        	<!--Product Tabs-->
-            <div class="prod-tabs tabs-box">
-                <div class="row clearfix">
-                	<!--Column-->
-                    <div class="col-lg-4 col-md-12 col-sm-12">
-                        <!--Tab Btns-->
-                        <ul class="tab-btns tab-buttons clearfix">
-                            <li data-tab="#prod-general" class="tab-btn">01. Get a Quote </li>
-                            <li data-tab="#prod-about" class="tab-btn active-btn">02. Select the services</li>
-                            <li data-tab="#prod-condition" class="tab-btn">03. Complete Pre-payment </li>
-                            <li data-tab="#prod-contact" class="tab-btn">04. Enjoy Our service</li>
-                        </ul>
-                    </div>
-                    <!--Column-->
-                    <div class="col-lg-8 col-md-12 col-sm-12">
-                    	<!--Tabs Container-->
-                        <div class="tabs-content">
-                        
-                            <!--Tab / Active Tab-->
-                            <div class="tab" id="prod-general">
-                            	<div class="content-outer">
-                                	
-                                    <!--Accordian Box-->
-                                    <ul class="accordion-box style-two">
-                                        
-                                        <!--Block-->
-                                        <li class="accordion block">
-                                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-question"></span></div>Browse through our services</div>
-                                            <div class="acc-content">
-                                                <div class="content">
-                                                    <div class="text">We provide detailed information about all our services so you can browse through the services and their prices from the comfort of your home.</div>
-                                                </div>
-                                            </div>
-                                        </li>
-                
-                                        <!--Block-->
-                                        <li class="accordion block active-block">
-                                            <div class="acc-btn active"><div class="icon-outer"><span class="icon icon-plus flaticon-question"></span></div> Get a online free quote </div>
-                                            <div class="acc-content current">
-                                                <div class="content">
-                                                    <div class="text">In case you cannot find the price or the details of the services you desire, you can always ask us for a free online quote</div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        
-                                        <!--Block-->
-                                        <li class="accordion block">
-                                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-question"></span></div>Call us to get a quote 24/7</div>
-                                            <div class="acc-content">
-                                                <div class="content">
-                                                    <div class="text">You can also call our friendly teanm anytime 24/7 to ask for any queries regarding any service or get quote for any services.</div>
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                    </ul>
-                                    
-                                </div>
-                            </div>
-                        
-                            <!--Tab-->
-                            <div class="tab active-tab" id="prod-about">
-                                <div class="content-outer">
-                                	
-                                    <!--Accordian Box-->
-                                    <ul class="accordion-box style-two">
-                                        
-                                        <!--Block-->
-                                        <li class="accordion block">
-                                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-question"></span></div>Filter the services by selecting the appropriate details</div>
-                                            <div class="acc-content">
-                                                <div class="content">
-                                                    <div class="text">Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseexcept to obtain some advantage from it.</div>
-                                                </div>
-                                            </div>
-                                        </li>
-                
-                                        <!--Block-->
-                                        <li class="accordion block active-block">
-                                            <div class="acc-btn active"><div class="icon-outer"><span class="icon icon-plus flaticon-question"></span></div>Dolores eos qui ratione voluptatem sequi nesciunt?. </div>
-                                            <div class="acc-content current">
-                                                <div class="content">
-                                                    <div class="text">Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseexcept to obtain some advantage from it.</div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        
-                                        <!--Block-->
-                                        <li class="accordion block">
-                                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-question"></span></div>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet?,</div>
-                                            <div class="acc-content">
-                                                <div class="content">
-                                                    <div class="text">Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseexcept to obtain some advantage from it.</div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        
-                                        <!--Block-->
-                                        <li class="accordion block">
-                                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-question"></span></div>Sed quia non numquam eius modi tempora?.</div>
-                                            <div class="acc-content">
-                                                <div class="content">
-                                                    <div class="text">Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseexcept to obtain some advantage from it.</div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        
-                                        <!--Block-->
-                                        <li class="accordion block">
-                                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-question"></span></div>Incidunt ut labore et dolore magnam aliquam quaerat ad?.</div>
-                                            <div class="acc-content">
-                                                <div class="content">
-                                                    <div class="text">Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseexcept to obtain some advantage from it.</div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        
-                                        <!--Block-->
-                                        <li class="accordion block">
-                                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-question"></span></div>Modi tempora incidunt ut labore et dolore magnam?.</div>
-                                            <div class="acc-content">
-                                                <div class="content">
-                                                    <div class="text">Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseexcept to obtain some advantage from it.</div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        
-                                        <!--Block-->
-                                        <li class="accordion block">
-                                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-question"></span></div>Numquam eius modi tempora incidunt ut labore et dolore?.</div>
-                                            <div class="acc-content">
-                                                <div class="content">
-                                                    <div class="text">Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseexcept to obtain some advantage from it.</div>
-                                                </div>
-                                            </div>
-                                        </li>
-                
-                                    </ul>
-                                    
-                                </div>
-                            </div>
-                            
-                            <!--Tab-->
-                            <div class="tab" id="prod-condition">
-                                <div class="content-outer">
-                                    
-                                    <!--Accordian Box-->
-                                    <ul class="accordion-box style-two">
-                                        
-                                        <!--Block-->
-                                        <li class="accordion block">
-                                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-question"></span></div>Eius modi tempora incidunt ut labore et dolore magnam?.</div>
-                                            <div class="acc-content">
-                                                <div class="content">
-                                                    <div class="text">Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseexcept to obtain some advantage from it.</div>
-                                                </div>
-                                            </div>
-                                        </li>
-                
-                                        <!--Block-->
-                                        <li class="accordion block active-block">
-                                            <div class="acc-btn active"><div class="icon-outer"><span class="icon icon-plus flaticon-question"></span></div>Dolores eos qui ratione voluptatem sequi nesciunt?. </div>
-                                            <div class="acc-content current">
-                                                <div class="content">
-                                                    <div class="text">Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseexcept to obtain some advantage from it.</div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        
-                                        <!--Block-->
-                                        <li class="accordion block">
-                                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-question"></span></div>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet?,</div>
-                                            <div class="acc-content">
-                                                <div class="content">
-                                                    <div class="text">Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseexcept to obtain some advantage from it.</div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        
-                                        <!--Block-->
-                                        <li class="accordion block">
-                                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-question"></span></div>Sed quia non numquam eius modi tempora?.</div>
-                                            <div class="acc-content">
-                                                <div class="content">
-                                                    <div class="text">Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseexcept to obtain some advantage from it.</div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        
-                                        <!--Block-->
-                                        <li class="accordion block">
-                                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-question"></span></div>Incidunt ut labore et dolore magnam aliquam quaerat ad?.</div>
-                                            <div class="acc-content">
-                                                <div class="content">
-                                                    <div class="text">Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseexcept to obtain some advantage from it.</div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        
-                                        <!--Block-->
-                                        <li class="accordion block">
-                                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-question"></span></div>Modi tempora incidunt ut labore et dolore magnam?.</div>
-                                            <div class="acc-content">
-                                                <div class="content">
-                                                    <div class="text">Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseexcept to obtain some advantage from it.</div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        
-                                        <!--Block-->
-                                        <li class="accordion block">
-                                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-question"></span></div>Numquam eius modi tempora incidunt ut labore et dolore?.</div>
-                                            <div class="acc-content">
-                                                <div class="content">
-                                                    <div class="text">Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseexcept to obtain some advantage from it.</div>
-                                                </div>
-                                            </div>
-                                        </li>
-                
-                                    </ul>
-                                    
-                                </div>
-                            </div>
-                            
-                            <!--Tab-->
-                            <div class="tab" id="prod-contact">
-                                <div class="content-outer">
-                                    
-                                    <!--Accordian Box-->
-                                    <ul class="accordion-box style-two">
-                                        
-                                        <!--Block-->
-                                        <li class="accordion block">
-                                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-question"></span></div>Eius modi tempora incidunt ut labore et dolore magnam?.</div>
-                                            <div class="acc-content">
-                                                <div class="content">
-                                                    <div class="text">Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseexcept to obtain some advantage from it.</div>
-                                                </div>
-                                            </div>
-                                        </li>
-                
-                                        <!--Block-->
-                                        <li class="accordion block active-block">
-                                            <div class="acc-btn active"><div class="icon-outer"><span class="icon icon-plus flaticon-question"></span></div>Dolores eos qui ratione voluptatem sequi nesciunt?. </div>
-                                            <div class="acc-content current">
-                                                <div class="content">
-                                                    <div class="text">Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseexcept to obtain some advantage from it.</div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        
-                                        <!--Block-->
-                                        <li class="accordion block">
-                                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-question"></span></div>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet?,</div>
-                                            <div class="acc-content">
-                                                <div class="content">
-                                                    <div class="text">Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseexcept to obtain some advantage from it.</div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        
-                                        <!--Block-->
-                                        <li class="accordion block">
-                                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-question"></span></div>Sed quia non numquam eius modi tempora?.</div>
-                                            <div class="acc-content">
-                                                <div class="content">
-                                                    <div class="text">Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseexcept to obtain some advantage from it.</div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        
-                                        <!--Block-->
-                                        <li class="accordion block">
-                                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-question"></span></div>Incidunt ut labore et dolore magnam aliquam quaerat ad?.</div>
-                                            <div class="acc-content">
-                                                <div class="content">
-                                                    <div class="text">Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseexcept to obtain some advantage from it.</div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        
-                                        <!--Block-->
-                                        <li class="accordion block">
-                                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-question"></span></div>Modi tempora incidunt ut labore et dolore magnam?.</div>
-                                            <div class="acc-content">
-                                                <div class="content">
-                                                    <div class="text">Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseexcept to obtain some advantage from it.</div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        
-                                        <!--Block-->
-                                        <li class="accordion block">
-                                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-question"></span></div>Numquam eius modi tempora incidunt ut labore et dolore?.</div>
-                                            <div class="acc-content">
-                                                <div class="content">
-                                                    <div class="text">Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseexcept to obtain some advantage from it.</div>
-                                                </div>
-                                            </div>
-                                        </li>
-                
-                                    </ul>
-                                    
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!--End Faq Page Section-->
+    <br />
+      
+         </form>
 </asp:Content>

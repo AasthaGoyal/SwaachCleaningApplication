@@ -390,11 +390,12 @@
 								<div class="footer-widget links-widget">
 									<h2>Information</h2>
 									<ul class="footer-links">
-										<li><a href="#">Home</a></li>
-										<li><a href="#">About Us</a></li>
-										<li><a href="#">How does it work?</a></li>
-										<li><a href="#">Our Reviews</a></li>
-										<li><a href="#">Contact us</a></li>
+										<li><a href="Default.aspx">Home</a></li>
+										<li><a href="AboutUs.aspx">About Us</a></li>
+										<li><a href="Process.aspx">How does it work?</a></li>
+										<li><a href="Reviews.aspx">Our Reviews</a></li>
+										<li><a href="ContactUs.aspx">Contact us</a></li>
+										<li> <a href="EmployeeLogin.aspx">Admin access</a></li>
 									</ul>
 								</div>
 							</div>

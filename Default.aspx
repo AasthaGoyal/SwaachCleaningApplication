@@ -217,7 +217,7 @@
 						<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
 							<div class="icon-box">
 								<span class="icon ">
-									<img src="images/background/wp1.png" height="50px" width="50px" /></span>
+									<img src="images/background/wp1.png" height="80px" width="80px" /></span>
 							</div>
 							<div class="number-line">
 								<div class="number">1</div>
@@ -243,7 +243,9 @@
 					<div class="process-block col-lg-3 col-md-6 col-sm-12">
 						<div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
 							<div class="icon-box">
-								<span class="icon flaticon-lotion"></span>
+								<span class="icon ">
+                                    <img src="images/background/w3.png" height="80px" width="80px"/>
+								</span>
 							</div>
 							<div class="number-line">
 								<div class="number">3</div>
@@ -256,7 +258,9 @@
 					<div class="process-block col-lg-3 col-md-6 col-sm-12">
 						<div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
 							<div class="icon-box">
-								<span class="icon flaticon-tools"></span>
+								<span class="icon flaticon-spray-1">
+                                    
+								</span>
 							</div>
 							<div class="number-line">
 								<div class="number">4</div>

@@ -156,6 +156,7 @@
     <Content Include="images\background\pattern-1.png" />
     <Content Include="images\background\pattern-2.jpg" />
     <Content Include="images\background\star.jpg" />
+    <Content Include="images\background\w3.png" />
     <Content Include="images\background\wp1.png" />
     <Content Include="images\background\wp2.png" />
     <Content Include="images\background\wp3.jpg" />
@@ -237,6 +238,10 @@
     <Content Include="images\main-slider\image-3.jpg" />
     <Content Include="images\main-slider\leg.png" />
     <Content Include="images\main-slider\logoo.png" />
+    <Content Include="images\main-slider\pro1.png" />
+    <Content Include="images\main-slider\pro2.jpg" />
+    <Content Include="images\main-slider\pro3.png" />
+    <Content Include="images\main-slider\pro4.png" />
     <Content Include="images\resource\about.jpg" />
     <Content Include="images\resource\author-1.jpg" />
     <Content Include="images\resource\author-10.jpg" />
@@ -347,7 +352,6 @@
     <Content Include="Reviews.aspx" />
     <Content Include="AddReview.aspx" />
     <Content Include="Process.aspx" />
-    <Content Include="Process2.aspx" />
     <Content Include="ServiceDetails.aspx" />
     <Content Include="WhyUs.aspx" />
   </ItemGroup>
@@ -432,13 +436,6 @@
     </Compile>
     <Compile Include="Process.aspx.designer.cs">
       <DependentUpon>Process.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Process2.aspx.cs">
-      <DependentUpon>Process2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Process2.aspx.designer.cs">
-      <DependentUpon>Process2.aspx</DependentUpon>
     </Compile>
     <Compile Include="tbBathroom.cs">
       <DependentUpon>DataModel.tt</DependentUpon>

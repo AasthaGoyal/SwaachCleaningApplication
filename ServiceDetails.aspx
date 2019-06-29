@@ -85,5 +85,10 @@
              <asp:AsyncPostBackTrigger ControlID="btnclick" EventName="Click" />
          </Triggers>
 	</asp:UpdatePanel>
-	   <hr />
-</asp:Content>
+    <br />
+	
+    <right>
+         <asp:Button ID="btnBookService" CssClass="btn-success" Width="50%"  runat="server" Text="Book Service" />
+
+    </right>
+   </asp:Content>
