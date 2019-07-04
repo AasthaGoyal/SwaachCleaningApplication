@@ -152,6 +152,7 @@
     <Content Include="images\background\3.jpg" />
     <Content Include="images\background\4.jpg" />
     <Content Include="images\background\5.jpg" />
+    <Content Include="images\background\arrow.png" />
     <Content Include="images\background\golden_star.jpg" />
     <Content Include="images\background\pattern-1.png" />
     <Content Include="images\background\pattern-2.jpg" />
@@ -176,6 +177,9 @@
     <Content Include="images\clients\2.png" />
     <Content Include="images\clients\3.png" />
     <Content Include="images\clients\4.png" />
+    <Content Include="images\clients\emptyStar.png" />
+    <Content Include="images\clients\filledStar.png" />
+    <Content Include="images\clients\redStar.png" />
     <Content Include="images\fancybox\blank.gif" />
     <Content Include="images\fancybox\fancybox_loading%402x.gif" />
     <Content Include="images\fancybox\fancybox_loading.gif" />
@@ -353,9 +357,20 @@
     <Content Include="AddReview.aspx" />
     <Content Include="Process.aspx" />
     <Content Include="ServiceDetails.aspx" />
+    <Content Include="LoginPage.aspx" />
+    <Content Include="ServicesMang.aspx" />
+    <Content Include="WebForm13.aspx" />
+    <Content Include="WebForm9.aspx" />
     <Content Include="WhyUs.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminLogin.Master.cs">
+      <DependentUpon>AdminLogin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.Master.designer.cs">
+      <DependentUpon>AdminLogin.Master</DependentUpon>
+    </Compile>
     <Compile Include="DataAccessLayer.cs" />
     <Compile Include="DataModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -483,6 +498,34 @@
     <Compile Include="ServiceDetails.aspx.designer.cs">
       <DependentUpon>ServiceDetails.aspx</DependentUpon>
     </Compile>
+    <Compile Include="LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServicesMang.aspx.cs">
+      <DependentUpon>ServicesMang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServicesMang.aspx.designer.cs">
+      <DependentUpon>ServicesMang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm13.aspx.cs">
+      <DependentUpon>WebForm13.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm13.aspx.designer.cs">
+      <DependentUpon>WebForm13.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm9.aspx.cs">
+      <DependentUpon>WebForm9.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm9.aspx.designer.cs">
+      <DependentUpon>WebForm9.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WhyUs.aspx.cs">
       <DependentUpon>WhyUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -520,6 +563,7 @@
     <Content Include="DataModel.edmx.diagram">
       <DependentUpon>DataModel.edmx</DependentUpon>
     </Content>
+    <Content Include="AdminLogin.Master" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\SwaachCleaning - Web Deploy.pubxml" />
     <Content Include="ServicesNested.master" />

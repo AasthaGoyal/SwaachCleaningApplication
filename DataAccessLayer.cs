@@ -42,5 +42,26 @@ namespace CleaningApplication
             cmd.ExecuteNonQuery();
         }
 
+        public string userLogin(string username, string password)
+        {
+            openConnection();
+
+            string query = "select fullname from tbstaff where (username ='" + username + "' and password='" + password + "')";
+            SqlCommand cmd = new SqlCommand(query, connection);
+
+            string name = cmd.ExecuteScalar().ToString();
+            return name;
+        }
+
+        public void editCategories(int id,string name, string desc, string photo, int rank)
+        {
+            openConnection();
+
+            string query = "update tbcategory set categoryName='" + name + "', categoryDesc='" + desc + "',categoryPhoto='" + photo + "', rank ='" + rank + "' where categoryid='" + id + "'";
+            SqlCommand cmd = new SqlCommand(query, connection);
+
+            cmd.ExecuteNonQuery();
+
+        }
     }
 }

@@ -369,11 +369,12 @@
 								<div class="footer-widget links-widget">
 									<h2>Services</h2>
 									<ul class="footer-links">
-										<li><a href="#">End of Tenancy Cleaning</a></li>
-										<li><a href="#">House Cleaning</a></li>
-										<li><a href="#">Garage Cleaning</a></li>
-										<li><a href="#">Window Cleaning</a></li>
-										<li><a href="#">Oven Cleaning</a></li>
+										<li><a href="ServiceDetails?categoryid=1">End of Tenancy Cleaning</a></li>
+										<li><a href="ServiceDetails?categoryid=2">House Cleaning</a></li>
+										<li><a href="ServiceDetails?categoryid=3">Garage Cleaning</a></li>
+										<li><a href="ServiceDetails?categoryid=4">Window Cleaning</a></li>
+										<li><a href="ServiceDetails?categoryid=5">Oven Cleaning</a></li>
+                                        <li><a href="ServiceDetails?categoryid=6">Commercial Cleaning</a></li>
 									</ul>
 								</div>
 							</div>

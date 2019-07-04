@@ -32,7 +32,7 @@ namespace CleaningApplication
                 RepeterData();
                 getReviews();
 
-
+                loadProcess();
             }
             
 
@@ -94,6 +94,43 @@ namespace CleaningApplication
             catch (Exception ex)
             {
                 lblMessage.Text = "* Error! " + ex.Message;
+            }
+        }
+
+        public void loadProcess()
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+
+            string query = "select * from tbprocess";
+            SqlCommand cmd = new SqlCommand(query, connection);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    if (Convert.ToInt32(reader["processid"]) == 1)
+                    {
+                       
+                        lblhead1.Text = reader.GetString(3);
+                    }
+                    else if (Convert.ToInt32(reader["processid"]) == 2)
+                    {
+                        
+                        lblhead2.Text = reader.GetString(3);
+                    }
+                    else if (Convert.ToInt32(reader["processid"]) == 3)
+                    {
+                        
+                        lblhead3.Text = reader.GetString(3);
+                    }
+                    else
+                    {
+                       
+                        lblhead4.Text = reader.GetString(3);
+                    }
+                }
             }
         }
 

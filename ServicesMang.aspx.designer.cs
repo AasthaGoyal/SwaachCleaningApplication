@@ -10,16 +10,25 @@
 namespace CleaningApplication {
     
     
-    public partial class WebForm1 {
+    public partial class WebForm11 {
         
         /// <summary>
-        /// RepterDetails control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater RepterDetails;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        
+        /// <summary>
+        /// txtcategoryid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtcategoryid;
         
         /// <summary>
         /// txtname control.
@@ -31,93 +40,75 @@ namespace CleaningApplication {
         protected global::System.Web.UI.WebControls.TextBox txtname;
         
         /// <summary>
-        /// txtemailid control.
+        /// imgPhoto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtemailid;
+        protected global::System.Web.UI.WebControls.Image imgPhoto;
         
         /// <summary>
-        /// txtPhone control.
+        /// fpUpload control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPhone;
+        protected global::System.Web.UI.WebControls.FileUpload fpUpload;
         
         /// <summary>
-        /// txtmessage control.
+        /// txtDescription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtmessage;
+        protected global::System.Web.UI.WebControls.TextBox txtDescription;
         
         /// <summary>
-        /// lblMessage control.
+        /// txtrank control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMessage;
+        protected global::System.Web.UI.WebControls.TextBox txtrank;
         
         /// <summary>
-        /// btnConfirm control.
+        /// btnEdit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnConfirm;
+        protected global::System.Web.UI.WebControls.Button btnEdit;
         
         /// <summary>
-        /// lblhead1 control.
+        /// btnDelete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblhead1;
+        protected global::System.Web.UI.WebControls.Button btnDelete;
         
         /// <summary>
-        /// lblhead2 control.
+        /// gdCategories control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblhead2;
+        protected global::System.Web.UI.WebControls.GridView gdCategories;
         
         /// <summary>
-        /// lblhead3 control.
+        /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblhead3;
-        
-        /// <summary>
-        /// lblhead4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblhead4;
-        
-        /// <summary>
-        /// rpReviews control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rpReviews;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }

@@ -13,6 +13,42 @@ namespace CleaningApplication {
     public partial class WebForm12 {
         
         /// <summary>
+        /// lblhead1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblhead1;
+        
+        /// <summary>
+        /// lblhead2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblhead2;
+        
+        /// <summary>
+        /// lblhead3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblhead3;
+        
+        /// <summary>
+        /// lblhead4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblhead4;
+        
+        /// <summary>
         /// lblname1 control.
         /// </summary>
         /// <remarks>

@@ -28,9 +28,10 @@
 									<img src="images/background/wp1.png" height="80px" width="80px" /></span>
 							</div>
 							<div class="number-line">
-								<div class="number">1</div>
+								<div class="number" >1</div>
 							</div>
-							<div class="text">Get a quote. Send us a email or call us to get an estimated quote of the services you require</div>
+							<div class="text">
+                                <asp:Label ID="lblhead1" runat="server" ></asp:Label></div>
 						</div>
 					</div>
 					
@@ -43,7 +44,7 @@
 							<div class="number-line">
 								<div class="number">2</div>
 							</div>
-							<div class="text">Select the services by looking at our service page</div>
+							<div class="text"> <asp:Label ID="lblhead2" runat="server" ></asp:Label></div>
 						</div>
 					</div>
 					
@@ -58,7 +59,7 @@
 							<div class="number-line">
 								<div class="number">3</div>
 							</div>
-							<div class="text">All the services require a pre-payment of atleast 30%. The payment would be made before the service. </div>
+							<div class="text"> <asp:Label ID="lblhead3" runat="server" ></asp:Label></div>
 						</div>
 					</div>
 					
@@ -73,7 +74,7 @@
 							<div class="number-line">
 								<div class="number">4</div>
 							</div>
-							<div class="text">Get the service done</div>
+							<div class="text"> <asp:Label ID="lblhead4" runat="server" ></asp:Label></div>
 						</div>
 					</div>
 					
@@ -87,7 +88,7 @@
         <div class="container form-control">
 
         
-    <table >
+    <table id="tbprocess1" >
         <tr>
             <td colspan="2">
                 
@@ -107,13 +108,13 @@
         <tr>
             <td>  <div class="form-group" style="text-align: right">
 
-                  <asp:Button ID="btnProcess1" runat="server" class="btn-primary form-control theme-btn book-btn"  Text="Get a Quote" /></div>
+                  <asp:Button ID="btnProcess1" runat="server" class="btn-primary form-control theme-btn book-btn"  Text="Get a Quote" OnClick="btnProcess1_Click" /></div>
             
               </td>
         </tr>
        </table>
 
-            <table>
+            <table id="tbprocess2">
 
         <tr>
              <td colspan="2">
@@ -132,13 +133,13 @@
                 <tr>
                      <td>  <div style="text-align: right">
 
-                  <asp:Button ID="btnProcess2" runat="server" class="btn-primary form-control theme-btn book-btn"  Text="See all services" /></div>
+                  <asp:Button ID="btnProcess2" runat="server" class="btn-primary form-control theme-btn book-btn"  Text="See all services" OnClick="btnProcess2_Click" /></div>
             
               </td>
                 </tr>
                 </table>
 
-             <table width="100%" >
+             <table width="100%" id="tbprocess3">
         <tr>
             <td colspan="2">
                 
@@ -158,7 +159,7 @@
         <tr>
             <td>  <div class="form-group" style="text-align: right">
 
-                  <asp:Button ID="btnProcess3" runat="server" class="btn-primary form-control theme-btn book-btn"  Text="Read more" /></div>
+                  <asp:Button ID="btnProcess3" runat="server" class="btn-primary form-control theme-btn book-btn"  Text="Read more" OnClick="btnProcess3_Click" /></div>
             
               </td>
         </tr>
@@ -190,7 +191,7 @@
               
 
 
-            <table>
+            <table id="tbprocess4">
          <tr>
             
              <td colspan="2">
@@ -209,7 +210,7 @@
                 <tr>
                      <td>  <div class="form-group" style="text-align: right">
 
-                  <asp:Button ID="btnProcess4" runat="server" class="btn-primary form-control theme-btn book-btn"  Text="Read our reviews" /></div>
+                  <asp:Button ID="btnProcess4" runat="server" class="btn-primary form-control theme-btn book-btn"  Text="Read our reviews" OnClick="btnProcess4_Click" /></div>
             
               </td>
                 </tr>
@@ -218,5 +219,6 @@
         </div>
     <br />
       
+       
          </form>
 </asp:Content>

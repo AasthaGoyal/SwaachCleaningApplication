@@ -196,7 +196,7 @@
 		</div>
 
 	<!--Process Section-->
-	<section class="process-section" style="background-image:url(images/background/1.jpg)">
+       <section class="process-section" style="background-image:url(images/background/1.jpg)">
 		<div class="top-layer"></div>
 		<div class="auto-container">
 			<!--Sec Title-->
@@ -222,7 +222,8 @@
 							<div class="number-line">
 								<div class="number">1</div>
 							</div>
-							<div class="text">Get a quote. Send us a email or call us to get an estimated quote of the services you require</div>
+							<div class="text">
+                                <asp:Label ID="lblhead1" runat="server" ></asp:Label></div>
 						</div>
 					</div>
 					
@@ -235,7 +236,7 @@
 							<div class="number-line">
 								<div class="number">2</div>
 							</div>
-							<div class="text">Select the services by looking at our service page</div>
+							<div class="text"> <asp:Label ID="lblhead2" runat="server" ></asp:Label></div>
 						</div>
 					</div>
 					
@@ -244,13 +245,13 @@
 						<div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
 							<div class="icon-box">
 								<span class="icon ">
-                                    <img src="images/background/w3.png" height="80px" width="80px"/>
+									<img src="images/background/w3.png" height="80px" width="80px"/>
 								</span>
 							</div>
 							<div class="number-line">
 								<div class="number">3</div>
 							</div>
-							<div class="text">All the services require a pre-payment of atleast 30%. The payment would be made before the service. </div>
+							<div class="text"> <asp:Label ID="lblhead3" runat="server" ></asp:Label></div>
 						</div>
 					</div>
 					
@@ -259,18 +260,20 @@
 						<div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
 							<div class="icon-box">
 								<span class="icon flaticon-spray-1">
-                                    
+									
 								</span>
 							</div>
 							<div class="number-line">
 								<div class="number">4</div>
 							</div>
-							<div class="text">Get the service done</div>
+							<div class="text"> <asp:Label ID="lblhead4" runat="server" ></asp:Label></div>
 						</div>
 					</div>
 					
 				</div>
-			</div>
+                </div>
+	
+				
 			
 			<!--Fact Counter-->
 			<div class="fact-counter">
