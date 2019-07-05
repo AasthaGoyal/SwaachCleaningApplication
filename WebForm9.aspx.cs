@@ -13,10 +13,5 @@ namespace CleaningApplication
         {
 
         }
-
-        protected void Rating1_Changed(object sender, AjaxControlToolkit.RatingEventArgs e)
-        {
-
-        }
     }
 }

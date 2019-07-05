@@ -196,7 +196,7 @@
 		</div>
 
 	<!--Process Section-->
-       <section class="process-section" style="background-image:url(images/background/1.jpg)">
+	   <section class="process-section" style="background-image:url(images/background/1.jpg)">
 		<div class="top-layer"></div>
 		<div class="auto-container">
 			<!--Sec Title-->
@@ -223,7 +223,7 @@
 								<div class="number">1</div>
 							</div>
 							<div class="text">
-                                <asp:Label ID="lblhead1" runat="server" ></asp:Label></div>
+								<asp:Label ID="lblhead1" runat="server" ></asp:Label></div>
 						</div>
 					</div>
 					
@@ -271,7 +271,7 @@
 					</div>
 					
 				</div>
-                </div>
+				</div>
 	
 				
 			
