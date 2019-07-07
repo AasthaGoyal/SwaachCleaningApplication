@@ -33,6 +33,17 @@ namespace CleaningApplication
             return name;
         }
 
+        public int getCatid(string name)
+        {
+            openConnection();
+
+            string query = "select categoryid from tbcategory where categoryName='" + name + "'";
+            SqlCommand cmd = new SqlCommand(query, connection);
+
+            int id = Convert.ToInt32(cmd.ExecuteScalar());
+            return id;
+        }
+
         public void addReview(string name, string heading, string review, int stars)
         {
             openConnection();
@@ -62,6 +73,79 @@ namespace CleaningApplication
 
             cmd.ExecuteNonQuery();
 
+        }
+
+        public void updateProcess(int id, string name, string heading, string desc)
+        {
+            openConnection();
+
+            string query = "update tbprocess set processName='" + name + "',processDesc='" + desc + "', heading='" + heading + "' where processid =" + id ;
+            SqlCommand cmd = new SqlCommand(query, connection);
+
+            cmd.ExecuteNonQuery();
+            
+        }
+
+        public void deleteProcess(int id)
+        {
+            openConnection();
+
+            string query = "delete from tbprocess where processid=" + id;
+            SqlCommand cmd = new SqlCommand(query, connection);
+
+            cmd.ExecuteNonQuery();
+        }
+
+        public void updateReview(int id, string heading, string review, string customerName, int stars)
+        {
+            openConnection();
+
+            string query = "update tbreviews set customerName='" + customerName + "', heading='" + heading + "',review ='" + review + "',stars ='" + stars + "' where reviewid =" + id;
+            SqlCommand cmd = new SqlCommand(query, connection);
+
+            cmd.ExecuteNonQuery();
+            
+        }
+
+        public void deleteReview(int id)
+        {
+            openConnection();
+
+            string query = "delete from tbreviews where reviewid=" + id;
+            SqlCommand cmd = new SqlCommand(query, connection);
+
+            cmd.ExecuteNonQuery();
+
+        }
+
+        public void updatePanel(string name, string phoneNo, string address, string timings , string aboutUs, string email, string logo, string suburb)
+        {
+            openConnection();
+
+            string query = "update tbpanel set companyName ='" + name + "', phoneNo='" + phoneNo + "',companyAddress='" + address + "', timings ='" + timings + "',aboutUs='" + aboutUs + "',companyEmail='" + email + "',logo='" + logo + "',suburb='" + suburb + "' where panelid =1";
+            SqlCommand cmd = new SqlCommand(query, connection);
+
+            cmd.ExecuteNonQuery();
+        }
+
+        public void updateService(int id,string name, string photo, string description, int rank)
+        {
+            openConnection();
+
+            string query = "update tbcategory set categoryName='" + name + "',categoryPhoto='" + photo + "',categoryDesc='" + description + "',rank ='" + rank + "' where categoryid=" + id;
+            SqlCommand cmd = new SqlCommand(query, connection);
+
+            cmd.ExecuteNonQuery();
+        }
+
+        public void deleteService(int id)
+        {
+            openConnection();
+
+            string query = "delete from tbcategory where categoryid=" + id;
+            SqlCommand cmd = new SqlCommand(query, connection);
+
+            cmd.ExecuteNonQuery();
         }
     }
 }

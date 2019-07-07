@@ -17,6 +17,8 @@ namespace CleaningApplication
         string connectionString = ConfigurationManager.ConnectionStrings["dbcleaningConnectionString"].ConnectionString;
         SqlConnection connection;
 
+     
+
         protected void Page_Load(object sender, EventArgs e)
         {
             id = Convert.ToInt32(Request.QueryString["categoryid"]);
@@ -288,6 +290,10 @@ namespace CleaningApplication
 
         protected void btnclick_Click(object sender, EventArgs e)
         {
+            //the list to store the selected options
+            List<string> column1 = new List<string>();
+            List<string> column2 = new List<string>();
+
             List<int> totalPrice = new List<int>();
             if(id == 1)
             {
@@ -298,13 +304,23 @@ namespace CleaningApplication
                 string[] name = dpBedrooms.SelectedItem.Text.Split('-');
                 cell1.Text = name[0];
                 TableCell cell2 = new TableCell();
-
+                column1.Add("col1 is " + name[0]);
+                column2.Add("col 2 is " + name[1]);
                 tenancyPrice.Add(Convert.ToInt32(name[1].Substring(3)));
                 cell2.Text = name[1];
                 row.Cells.Add(cell1);
                 row.Cells.Add(cell2);
+
+                Session["column1"] = column1;
+                Session["column2"] = column2;
+
                 myTable.Rows.Add(row);
 
+                foreach(string item in column1)
+                {
+                    TextBox1.Text = TextBox1.Text + "," + item;
+                }
+               
                 TableRow row2 = new TableRow();
                 string[] bath = dpBathrooms.SelectedItem.Text.Split('-');
                 TableCell cell3 = new TableCell();
@@ -533,6 +549,9 @@ namespace CleaningApplication
                     subsubtotal = subsubtotal + item;
                 }
                 lblTotal.Text = "$" + subsubtotal.ToString();
+
+              
+
             }
 
         }
@@ -790,6 +809,11 @@ namespace CleaningApplication
                 }
             }
             reader2.Close();
+        }
+
+        protected void btnBookService_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ServiceEook.aspx");
         }
     }
 }

@@ -358,17 +358,23 @@
     <Content Include="Process.aspx" />
     <Content Include="ServiceDetails.aspx" />
     <Content Include="LoginPage.aspx" />
-    <Content Include="ServicesMang.aspx" />
+    <Content Include="Review2.aspx" />
+    <Content Include="ServiceEook.aspx" />
+    <Content Include="ProcessManagement.aspx" />
+    <Content Include="ReviewManagement.aspx" />
+    <Content Include="PanelManagement.aspx" />
+    <Content Include="ServicesManagement.aspx" />
+    <Content Include="ServDetailsMang.aspx" />
     <Content Include="WebForm9.aspx" />
     <Content Include="WhyUs.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminLogin.Master.cs">
-      <DependentUpon>AdminLogin.Master</DependentUpon>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdminLogin.Master.designer.cs">
-      <DependentUpon>AdminLogin.Master</DependentUpon>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer.cs" />
     <Compile Include="DataModel.Context.cs">
@@ -504,12 +510,54 @@
     <Compile Include="LoginPage.aspx.designer.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ServicesMang.aspx.cs">
-      <DependentUpon>ServicesMang.aspx</DependentUpon>
+    <Compile Include="Review2.aspx.cs">
+      <DependentUpon>Review2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ServicesMang.aspx.designer.cs">
-      <DependentUpon>ServicesMang.aspx</DependentUpon>
+    <Compile Include="Review2.aspx.designer.cs">
+      <DependentUpon>Review2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceEook.aspx.cs">
+      <DependentUpon>ServiceEook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServiceEook.aspx.designer.cs">
+      <DependentUpon>ServiceEook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessManagement.aspx.cs">
+      <DependentUpon>ProcessManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProcessManagement.aspx.designer.cs">
+      <DependentUpon>ProcessManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReviewManagement.aspx.cs">
+      <DependentUpon>ReviewManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReviewManagement.aspx.designer.cs">
+      <DependentUpon>ReviewManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PanelManagement.aspx.cs">
+      <DependentUpon>PanelManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PanelManagement.aspx.designer.cs">
+      <DependentUpon>PanelManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServicesManagement.aspx.cs">
+      <DependentUpon>ServicesManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServicesManagement.aspx.designer.cs">
+      <DependentUpon>ServicesManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServDetailsMang.aspx.cs">
+      <DependentUpon>ServDetailsMang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServDetailsMang.aspx.designer.cs">
+      <DependentUpon>ServDetailsMang.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm9.aspx.cs">
       <DependentUpon>WebForm9.aspx</DependentUpon>
@@ -555,7 +603,7 @@
     <Content Include="DataModel.edmx.diagram">
       <DependentUpon>DataModel.edmx</DependentUpon>
     </Content>
-    <Content Include="AdminLogin.Master" />
+    <Content Include="Admin.Master" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\SwaachCleaning - Web Deploy.pubxml" />
     <Content Include="ServicesNested.master" />

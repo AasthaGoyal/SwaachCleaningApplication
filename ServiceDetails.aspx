@@ -8,19 +8,19 @@
 	<h3>Services/<asp:Label ID="lblname2"  runat="server" ></asp:Label></h3>
 <%--</asp:Content>--%>
 <%--<asp:Content ID="Content3" ContentPlaceHolderID="Cont3" runat="server">
-    <p> <asp:label runat="server" id="lblDesc"></asp:label></p>
+	<p> <asp:label runat="server" id="lblDesc"></asp:label></p>
 <%--</asp:Content>--%>
 <asp:Content ID="Content4" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:DropDownList class="form-control" ID="dpFilter" runat="server" Visible="false"></asp:DropDownList>
-    <br />
-    <asp:Panel ID="pnEndoftenancy" visible="false" runat="server">
-        
+	<asp:DropDownList class="form-control" ID="dpFilter" runat="server" Visible="false"></asp:DropDownList>
+	<br />
+	<asp:Panel ID="pnEndoftenancy" visible="false" runat="server">
+		
 	Number of Bedrooms:
 	<asp:DropDownList class="form-control" ID="dpBedrooms" runat="server"  ></asp:DropDownList>
 	<br />
 	Number of Bathrooms:
 	<asp:DropDownList class="form-control" ID="dpBathrooms" runat="server"></asp:DropDownList>
-        <asp:CheckBoxList ID="cbBathroomExtras" runat="server"></asp:CheckBoxList>
+		<asp:CheckBoxList ID="cbBathroomExtras" runat="server"></asp:CheckBoxList>
 	<br />
 	Number of Garages:
 	<asp:DropDownList class="form-control" ID="dpGarages" runat="server"></asp:DropDownList>
@@ -34,26 +34,26 @@
    <b> Extras:</b>
 	<asp:CheckBoxList ID="CheckBoxList1" runat="server" ></asp:CheckBoxList>
 	<br />
-    </asp:Panel>
-    <asp:panel ID="pncarpet" Visible="false" runat="server">
-         <asp:DropDownList ID="dpCarpet" CssClass="form-control" runat="server"></asp:DropDownList>
+	</asp:Panel>
+	<asp:panel ID="pncarpet" Visible="false" runat="server">
+		 <asp:DropDownList ID="dpCarpet" CssClass="form-control" runat="server"></asp:DropDownList>
 	<br />
 	Enter the Area Sq Meters:
 	<asp:TextBox ID="txtarea" class="form-control" runat="server"  ></asp:TextBox>
 	<br />
-        <asp:CheckBoxList ID="cbCarpetExtras" runat="server"></asp:CheckBoxList>
-        <br />
-    </asp:panel>
-    <asp:Panel ID="pnExtra" runat="server">
-        <asp:CheckBoxList ID="cbExtras" runat="server"></asp:CheckBoxList>
-    </asp:Panel>
-    
+		<asp:CheckBoxList ID="cbCarpetExtras" runat="server"></asp:CheckBoxList>
+		<br />
+	</asp:panel>
+	<asp:Panel ID="pnExtra" runat="server">
+		<asp:CheckBoxList ID="cbExtras" runat="server"></asp:CheckBoxList>
+	</asp:Panel>
+	
 	<asp:Button ID="btnclick" class="btn-primary form-control" runat="server" Text="Check Price" OnClick="btnclick_Click"  />
 	 
-    <hr />
+	<hr />
 	<br />
 	
-    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+	<asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 	<asp:UpdatePanel ID="UpdatePanel1" runat="server">
 		<ContentTemplate>
 	   
@@ -81,14 +81,17 @@
   
 	</ContentTemplate>
 
-         <Triggers>
-             <asp:AsyncPostBackTrigger ControlID="btnclick" EventName="Click" />
-         </Triggers>
+		 <Triggers>
+			 <asp:AsyncPostBackTrigger ControlID="btnclick" EventName="Click" />
+		 </Triggers>
 	</asp:UpdatePanel>
-    <br />
+	<br />
 	
-    <right>
-         <asp:Button ID="btnBookService" CssClass="btn-success" Width="50%"  runat="server" Text="Book Service" />
+	
+       <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <br />
 
-    </right>
+		 <asp:Button ID="btnBookService" CssClass="btn-success" Width="50%"  runat="server" Text="Book Service" OnClick="btnBookService_Click" />
+
+	
    </asp:Content>
