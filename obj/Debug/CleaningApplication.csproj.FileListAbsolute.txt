@@ -62,3 +62,6 @@ E:\CleaningApplication\CleaningApplication\bin\roslyn\System.Net.Sockets.dll
 E:\CleaningApplication\CleaningApplication\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
 E:\CleaningApplication\CleaningApplication\bin\roslyn\System.Threading.Tasks.Extensions.dll
 E:\CleaningApplication\CleaningApplication\obj\Debug\CleaningApplication.csprojAssemblyReference.cache
+E:\CleaningApplication\CleaningApplication\bin\AWSSDK.Core.dll
+E:\CleaningApplication\CleaningApplication\bin\AWSSDK.Core.pdb
+E:\CleaningApplication\CleaningApplication\bin\AWSSDK.Core.xml

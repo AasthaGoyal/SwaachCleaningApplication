@@ -7,15 +7,83 @@
         <h2> Services Detail Management</h2>
        <br />
           <asp:DropDownList ID="dpcategory" CssClass="form-control" runat="server" DataSourceID="SqlDataSource1" DataTextField="categoryName" DataValueField="categoryName" OnSelectedIndexChanged="dpcategory_SelectedIndexChanged" AutoPostBack="True"></asp:DropDownList>
+        <br />
+      
+        <asp:DropDownList class="form-control" ID="dpdetails" runat="server" AutoPostBack="True" OnSelectedIndexChanged="dpdetails_SelectedIndexChanged" ></asp:DropDownList>
+        <br />
+        <asp:GridView ID="GridView1" width="100%" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" >
+            <AlternatingRowStyle BackColor="#DCDCDC" />
+            <Columns>
+                <asp:CommandField ButtonType="Image" SelectImageUrl="~/images/background/arrow.png" ShowSelectButton="True">
+                <ControlStyle Height="30px" Width="30px" />
+                </asp:CommandField>
+            </Columns>
+            <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+            <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+            <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
+            <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+            <SortedAscendingHeaderStyle BackColor="#0000A9" />
+            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+            <SortedDescendingHeaderStyle BackColor="#000065" />
+        </asp:GridView>
+        <br />
+        
+       
+          <hr />
+        <br />
+
+        <h4> The Extra items: </h4>
+        <br />
+        <asp:GridView ID="gdExtras" class="form-control" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="extraid"  GridLines="Vertical">
+            <AlternatingRowStyle BackColor="#DCDCDC" />
+            <Columns>
+                <asp:CommandField ButtonType="Image" SelectImageUrl="~/images/background/arrow.png" ShowSelectButton="True">
+                <ControlStyle Height="30px" Width="30px" />
+                </asp:CommandField>
+                <asp:BoundField DataField="extraid" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="extraid" />
+                <asp:BoundField DataField="extraName" HeaderText="Name" SortExpression="extraName" />
+                <asp:BoundField DataField="eprice" HeaderText="Price" SortExpression="eprice" />
+                <asp:BoundField DataField="serviceid" HeaderText="Service Id" SortExpression="serviceid" />
+            </Columns>
+            <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+            <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+            <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
+            <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+            <SortedAscendingHeaderStyle BackColor="#0000A9" />
+            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+            <SortedDescendingHeaderStyle BackColor="#000065" />
+        </asp:GridView>
+       
+        <br />
+        <h4>Select an item to Edit or delete:</h4>  
+    
+        <br />
+        Service Id:<br />
+        <asp:TextBox class="form-control" ID="txtid" runat="server"></asp:TextBox>
+        <br />
+        Service name:<br />
+        <asp:TextBox class="form-control" ID="txtname" runat="server"></asp:TextBox>
+        <br />
+        Price(NZD):<br />
+        <asp:TextBox class="form-control" ID="txtprice" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <asp:Button ID="btnUpdate" class="btn-success" width="200px" height="50px" runat="server" Text="Update" OnClick="btnUpdate_Click" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="btnDelete" class="btn-danger " width="200px" height="50px" runat="server" Text="Delete" OnClick="btnDelete_Click" />
+      
+        <br />
+        
+        <asp:Label ID="lblMessage" runat="server" ></asp:Label>
+
+       
+
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbcleaningConnectionString %>" SelectCommand="SELECT [categoryName] FROM [tbcategory]"></asp:SqlDataSource>
-        <br />
-        <asp:DropDownList class="form-control" ID="dpdetails" runat="server"></asp:DropDownList>
-        <br />
-        The price distribution:
-      <asp:GridView ID="gdInfo" class="form-control" runat="server"></asp:GridView>
-        <br />
-        The Extras:
-        <asp:GridView ID="gdExtras" class="form-control" runat="server"></asp:GridView>
+        
     </form>
   
 </asp:Content>
