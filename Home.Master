@@ -374,7 +374,7 @@
 										<li><a href="ServiceDetails?categoryid=3">Garage Cleaning</a></li>
 										<li><a href="ServiceDetails?categoryid=4">Window Cleaning</a></li>
 										<li><a href="ServiceDetails?categoryid=5">Oven Cleaning</a></li>
-                                        <li><a href="ServiceDetails?categoryid=6">Commercial Cleaning</a></li>
+										<li><a href="ServiceDetails?categoryid=6">Commercial Cleaning</a></li>
 									</ul>
 								</div>
 							</div>
@@ -396,7 +396,7 @@
 										<li><a href="Process.aspx">How does it work?</a></li>
 										<li><a href="Reviews.aspx">Our Reviews</a></li>
 										<li><a href="ContactUs.aspx">Contact us</a></li>
-										<li> <a href="EmployeeLogin.aspx">Admin access</a></li>
+										<li> <a href="LoginPage.aspx">Admin access</a></li>
 									</ul>
 								</div>
 							</div>

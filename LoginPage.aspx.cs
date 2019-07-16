@@ -45,6 +45,7 @@ namespace CleaningApplication
             {
                 lblmessage.ForeColor = System.Drawing.Color.Green;
                 lblmessage.Text = "Welcome " + name;
+                Response.Redirect("ReviewManagement.aspx");
             }
         }
     }

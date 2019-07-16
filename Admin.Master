@@ -6,6 +6,9 @@
 <head runat="server">
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet"/>
+<link href="css/responsive.css" rel="stylesheet"/>
   
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
@@ -80,6 +83,7 @@
     <a href="PanelManagement.aspx"> Panel management</a>
     <a href="ServicesManagement.aspx"> Services Management</a>
     <a href="ServDetailsMang.aspx"> Services Details Management</a>
+    <a href="StaffManagement.aspx"> Staff Management</a>
  <%-- <div class="dropdown">
   <button class="dropbtn" onclick="myFunction()">Services management
     <i class="fa fa-caret-down"></i>

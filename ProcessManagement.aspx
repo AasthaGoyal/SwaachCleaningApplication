@@ -1,9 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="ProcessManagement.aspx.cs" Inherits="CleaningApplication.WebForm16" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="form1" runat="server">
-          <link href="css/bootstrap.css" rel="stylesheet" />
-<link href="css/style.css" rel="stylesheet"/>
-<link href="css/responsive.css" rel="stylesheet"/>
+         
     <h1> Process Management</h1>
     <br />
         Process Id:

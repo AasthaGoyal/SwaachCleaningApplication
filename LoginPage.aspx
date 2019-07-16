@@ -3,40 +3,31 @@
     <form runat="server">
 
   
-    <h1 class="text-center"> Login</h1>
+    <h1 class="text-center" style="margin-left: 40px"> Login</h1>
     <br />
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-    <table class="container form-control">
-        <tr>
-            <td style="height: 21px; width:15%"> <asp:Label ID="Label1" runat="server" Text="Username"></asp:Label><br /> </td>
-       
-        <td style="height: 21px; width:70%">
-            <asp:TextBox class="form-control" ID="txtUsername" runat="server" placeholder="Enter Username"></asp:TextBox>
-            <br />
-        </td>
-        <td style="height: 21px; width:20%">
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="* Username required" ControlToValidate="txtUsername" Font-Bold="True" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+    Username:<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="* Username required" ControlToValidate="txtUsername" Font-Bold="True" ForeColor="#CC0000" ValidationGroup="loginuser"></asp:RequiredFieldValidator>
+       &nbsp;<asp:TextBox class="form-control" ID="txtUsername" runat="server" placeholder="Enter Username"></asp:TextBox>
+          
        <br />
-          </td>
-         </tr>
-        
-           <tr>
-            <td style="height: 21px; width:15%"> <asp:Label ID="Label2" runat="server" Text="Password"></asp:Label> 
-                <br />
-            </td>
+          Password:<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="* Password required" ControlToValidate="txtPassword" Font-Bold="True" ForeColor="#CC0000" ValidationGroup="loginuser"></asp:RequiredFieldValidator>
+      
+            <asp:TextBox class="form-control" PasswordChar="*" ID="txtPassword" runat="server" placeholder="Enter Password"></asp:TextBox>
+           
+              <br />
        
-        <td style="height: 21px; width:70%">
-            <asp:TextBox class="form-control" ID="txtPassword" runat="server" placeholder="Enter Password"></asp:TextBox>
+            <asp:Button ID="btnLogin" runat="server" Text="Login" class="form-control btn-success" OnClick="btnLogin_Click" ValidationGroup="loginuser"/>
             <br />
-        </td>
-        <td style="height: 21px; width:20%">
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="* Password required" ControlToValidate="txtPassword" Font-Bold="True" ForeColor="#CC0000"></asp:RequiredFieldValidator>
-        <br />
-        </td>
-         </tr>
-        <br />
-        <tr > <td colspan="3"><asp:Button ID="btnLogin" runat="server" Text="Login" class="form-control btn-success" OnClick="btnLogin_Click"/></td></tr>
-        <tr> <td colspan="3" class="text-center"> <asp:Label ID="lblmessage" runat="server" Font-Bold="True" ForeColor="#009900" ></asp:Label></td></tr>
+             <table class="form-control">
+                 <tr>
+          <td style="width:50%">    <a href="#" onclick="window.open('ForgotPassword.aspx','FP','width=500, height=100,top=300,left=500,fullscreen=null,resize=0');">
+                <asp:Label ID="Label4" runat="server" Text="Forgot Password" Font-Bold="True" ForeColor="#333399"></asp:Label>
+          
+             
+            </a></td>
+            <td  class="text-center"> <asp:Label ID="lblmessage" runat="server" Font-Bold="True" ForeColor="#009900" ></asp:Label></td>
+            <td class="text-right"> <a href="registerUser.aspx"> New User? Register</a></td>
+        </tr>
     </table>
     
           </form>

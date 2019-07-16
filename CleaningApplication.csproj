@@ -150,6 +150,7 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\revicons90c6.svg" />
+    <Content Include="ForgotPassword.aspx" />
     <Content Include="images\background\1.jpg" />
     <Content Include="images\background\2.jpg" />
     <Content Include="images\background\3.jpg" />
@@ -368,6 +369,8 @@
     <Content Include="PanelManagement.aspx" />
     <Content Include="ServicesManagement.aspx" />
     <Content Include="ServDetailsMang.aspx" />
+    <Content Include="registerUser.aspx" />
+    <Content Include="StaffManagement.aspx" />
     <Content Include="WebForm9.aspx" />
     <Content Include="WhyUs.aspx" />
   </ItemGroup>
@@ -394,6 +397,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.Master.cs">
       <DependentUpon>Home.Master</DependentUpon>
@@ -561,6 +571,20 @@
     </Compile>
     <Compile Include="ServDetailsMang.aspx.designer.cs">
       <DependentUpon>ServDetailsMang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registerUser.aspx.cs">
+      <DependentUpon>registerUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registerUser.aspx.designer.cs">
+      <DependentUpon>registerUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffManagement.aspx.cs">
+      <DependentUpon>StaffManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffManagement.aspx.designer.cs">
+      <DependentUpon>StaffManagement.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm9.aspx.cs">
       <DependentUpon>WebForm9.aspx</DependentUpon>

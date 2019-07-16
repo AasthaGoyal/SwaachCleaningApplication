@@ -1,9 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="PanelManagement.aspx.cs" Inherits="CleaningApplication.WebForm17" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form runat="server">
-          <link href="css/bootstrap.css" rel="stylesheet" />
-<link href="css/style.css" rel="stylesheet"/>
-<link href="css/responsive.css" rel="stylesheet"/>
+        
 
     
     <h2> Panel Managemrnt</h2>

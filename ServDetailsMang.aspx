@@ -6,7 +6,9 @@
 <link href="css/responsive.css" rel="stylesheet"/>
         <h2> Services Detail Management</h2>
        <br />
-          <asp:DropDownList ID="dpcategory" CssClass="form-control" runat="server" DataSourceID="SqlDataSource1" DataTextField="categoryName" DataValueField="categoryName" OnSelectedIndexChanged="dpcategory_SelectedIndexChanged" AutoPostBack="True"></asp:DropDownList>
+          <asp:DropDownList ID="dpcategory" CssClass="form-control" runat="server" DataSourceID="SqlDataSource1" DataTextField="categoryName" DataValueField="categoryName" OnSelectedIndexChanged="dpcategory_SelectedIndexChanged" AutoPostBack="True">
+             
+        </asp:DropDownList>
         <br />
       
         <asp:DropDownList class="form-control" ID="dpdetails" runat="server" AutoPostBack="True" OnSelectedIndexChanged="dpdetails_SelectedIndexChanged" ></asp:DropDownList>
@@ -34,9 +36,9 @@
           <hr />
         <br />
 
-        <h4> The Extra items: </h4>
+        <h5> The Extra items: </h5>
         <br />
-        <asp:GridView ID="gdExtras" class="form-control" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="extraid"  GridLines="Vertical">
+        <asp:GridView ID="gdExtras"  Width="100%" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="extraid"  GridLines="Vertical" OnSelectedIndexChanged="gdExtras_SelectedIndexChanged">
             <AlternatingRowStyle BackColor="#DCDCDC" />
             <Columns>
                 <asp:CommandField ButtonType="Image" SelectImageUrl="~/images/background/arrow.png" ShowSelectButton="True">
@@ -60,16 +62,40 @@
        
         <br />
         <h4>Select an item to Edit or delete:</h4>  
-    
+   <br />
         <br />
-        Service Id:<br />
-        <asp:TextBox class="form-control" ID="txtid" runat="server"></asp:TextBox>
+        <table width="100%" class="form-control">
+            <tr>
+                <td colspan="2"><b>Service Details:</b> </td>
+                <td colspan="2"> <b>Extra Details:</b></td>
+            </tr>
+            <tr>
+                <td style="width: 20%"> Service Id:</td>
+                <td style="width: 30%">  <asp:TextBox class="form-control" ID="txtid" runat="server" Enabled="False" Width="100%"></asp:TextBox>
+        </td>
+                <td style="width:20%"> Extra Id:</td>
+                <td style="width:30%">   <asp:TextBox class="form-control" ID="txtextraid" runat="server" Enabled="False" Width="100%"></asp:TextBox>
+       </td>
+            </tr>
+            <tr>
+                <td style="width: 20%"> Service name:</td>
+                <td style="width:30%">         <asp:TextBox class="form-control" ID="txtname" runat="server"></asp:TextBox>
+        </td>
+                <td style="width: 20%"> Extra Name:</td>
+                <td style="width:30%">         <asp:TextBox class="form-control" ID="txtextraname" runat="server"></asp:TextBox>
+        </td>
+            </tr>
+            <tr> <td style="width: 20%"> Price(NZD):</td>
+                <td style="width:30%"> <asp:TextBox class="form-control" ID="txtprice" runat="server"></asp:TextBox>
+        </td>
+                <td style="width: 20%"> Price(NZD) for Extra service:</td>
+                <td style="width:30%">  <asp:TextBox class="form-control" ID="txtextraprice" runat="server"></asp:TextBox>
+       </td>
+            </tr>
+        </table>
         <br />
-        Service name:<br />
-        <asp:TextBox class="form-control" ID="txtname" runat="server"></asp:TextBox>
-        <br />
-        Price(NZD):<br />
-        <asp:TextBox class="form-control" ID="txtprice" runat="server"></asp:TextBox>
+        
+   
         <br />
         <br />
         <asp:Button ID="btnUpdate" class="btn-success" width="200px" height="50px" runat="server" Text="Update" OnClick="btnUpdate_Click" />
@@ -78,7 +104,9 @@
       
         <br />
         
-        <asp:Label ID="lblMessage" runat="server" ></asp:Label>
+        <asp:Label ID="lblMessage" Visible="false" runat="server" ></asp:Label>
+        <br />
+        <asp:Label ID="lblfeedback" runat="server"  Font-Bold="True" ForeColor="#CC0000"></asp:Label>
 
        
 

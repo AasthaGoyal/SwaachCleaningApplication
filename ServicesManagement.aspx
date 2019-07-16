@@ -1,9 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="ServicesManagement.aspx.cs" Inherits="CleaningApplication.WebForm18" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="form1" runat="server">
-    <link href="css/bootstrap.css" rel="stylesheet" />
-<link href="css/style.css" rel="stylesheet"/>
-<link href="css/responsive.css" rel="stylesheet"/>
+   
     <h2> Services Management</h2>
     <br />
     Category Id:

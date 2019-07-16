@@ -96,6 +96,18 @@ namespace CleaningApplication
             cmd.ExecuteNonQuery();
         }
 
+        public int getserviceid(string name, int categoryid)
+        {
+            openConnection();
+
+            string query = "select serviceid from tbservices where serviceDesc='" + name + "' and categoryId ='" + categoryid + "'";
+               SqlCommand cmd = new SqlCommand(query, connection);
+
+            int id = Convert.ToInt32(cmd.ExecuteScalar());
+            return id;
+
+        }
+
         public void updateReview(int id, string heading, string review, string customerName, int stars)
         {
             openConnection();
@@ -143,6 +155,36 @@ namespace CleaningApplication
             openConnection();
 
             string query = "delete from tbcategory where categoryid=" + id;
+            SqlCommand cmd = new SqlCommand(query, connection);
+
+            cmd.ExecuteNonQuery();
+        }
+
+        public void registerUser(string name, string address, string phoneNo, string emailid, string position, string photo, string username, string password)
+        {
+            openConnection();
+
+            string query = "insert into tbstaff values('" + name + "','" + address + "','" + phoneNo + "','" + emailid + "','" + position + "','" + photo + "','" + username + "','" + password + "')";
+            SqlCommand cmd = new SqlCommand(query, connection);
+
+            cmd.ExecuteNonQuery();
+        }
+
+        public void updateStaff(int id, string name, string address, int phoneno, string emailid, string position, string photo, string username)
+        {
+            openConnection();
+
+            string query = "update tbstaff set fullname='" + name + "',staffAddress='" + address + "',phoneNo='" + phoneno + "',photo ='" + photo + "', username ='" + username + "' where staffid=" + id;
+            SqlCommand cmd = new SqlCommand(query, connection);
+
+            cmd.ExecuteNonQuery();
+        }
+
+        public void deleteStaff(int id)
+        {
+            openConnection();
+
+            string query = "delete from tbstaff where staffid =" + id;
             SqlCommand cmd = new SqlCommand(query, connection);
 
             cmd.ExecuteNonQuery();
